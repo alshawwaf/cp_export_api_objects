@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+Pipfile.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Exported data (regenerated at runtime)
+check_point_policy/objects/
+check_point_policy/docs/
+check_point_policy/logs/
+check_point_policy/import_mgmt_cli.txt
+check_point_policy/cp_mgmt_playbook.yml
+
+# Generated configs (regenerated from API spec)
+config/field_schemas/
+config/api_supported_objects.json
+config/dynamic_supported_modules.json
+
+# OS
+Thumbs.db
+.DS_Store
