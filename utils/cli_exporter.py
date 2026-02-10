@@ -63,9 +63,18 @@ def _format_cli_value(value):
     return s
 
 
-def _flatten_to_cli_params(data, parent_key=''):
+# Maximum nesting depth for CLI parameter flattening.
+# The mgmt_cli API typically rejects parameters nested deeper than 2 levels
+# (e.g. mep.default-priority-rule.satellite-gateways is invalid).
+MAX_FLATTEN_DEPTH = 2
+
+
+def _flatten_to_cli_params(data, parent_key='', depth=0):
     """Flatten a nested dict into dot-notation key-value pairs for mgmt_cli."""
     params = []
+    
+    if depth >= MAX_FLATTEN_DEPTH:
+        return params
     
     if isinstance(data, dict):
         for k, v in data.items():
@@ -74,11 +83,11 @@ def _flatten_to_cli_params(data, parent_key=''):
             full_key = f"{parent_key}.{k}" if parent_key else k
             
             if isinstance(v, dict):
-                params.extend(_flatten_to_cli_params(v, full_key))
+                params.extend(_flatten_to_cli_params(v, full_key, depth + 1))
             elif isinstance(v, list):
                 for i, item in enumerate(v):
                     if isinstance(item, (dict, list)):
-                        params.extend(_flatten_to_cli_params(item, f"{full_key}.{i}"))
+                        params.extend(_flatten_to_cli_params(item, f"{full_key}.{i}", depth + 1))
                     else:
                         params.append((f"{full_key}.{i}", _format_cli_value(item)))
             else:
@@ -87,20 +96,20 @@ def _flatten_to_cli_params(data, parent_key=''):
     return params
 
 
-def generate_cli_command(obj_type, obj_data):
+def generate_cli_command(obj_type, obj_data, verb="add"):
     """
-    Generate a single mgmt_cli add command from clean API object data.
-    
-    Args:
-        obj_type: Object type (e.g. 'host', 'network')  
-        obj_data: Clean object dict with dash-keyed fields (API format)
-    
-    Returns:
-        str: Complete mgmt_cli command string
+    Generate a single mgmt_cli command from clean API object data.
     """
-    params = _flatten_to_cli_params(obj_data)
+    # Create a local copy to avoid modifying the original list/dict
+    clean_data = copy.deepcopy(obj_data)
     
-    cmd_parts = [f"mgmt_cli add {obj_type}"]
+    # Strip internal markers before generating CLI
+    clean_data.pop('is_cleanup', None)
+    clean_data.pop('has_default_cleanup', None)
+    
+    params = _flatten_to_cli_params(clean_data)
+    
+    cmd_parts = [f"mgmt_cli -r true {verb} {obj_type}"]
     for key, value in params:
         cmd_parts.append(f"{key} {value}")
     cmd_parts.append("ignore-warnings true")
@@ -128,7 +137,21 @@ class CLIExporter:
         commands = []
         for obj_data in objects:
             try:
-                cmd = generate_cli_command(obj_type, obj_data)
+                # Use 'set' for objects that usually exist by default on target SMS
+                verb = "add"
+                if obj_type == 'access-layer':
+                    verb = "set"
+                
+                # Special handling for Cleanup rules
+                if obj_type == 'access-rule' and obj_data.get('is_cleanup'):
+                    # Force track to Log for cleanup rules
+                    obj_data['track'] = "Log"
+                    if obj_data.get('has_default_cleanup'):
+                        verb = "set"
+                    else:
+                        verb = "add"
+                
+                cmd = generate_cli_command(obj_type, obj_data, verb=verb)
                 commands.append(cmd)
             except Exception as e:
                 obj_name = obj_data.get('name', 'unknown')
@@ -161,7 +184,6 @@ class CLIExporter:
             commands = self.cli_objects[obj_type]
             all_lines.append(f"\n# {obj_type} ({len(commands)} objects)")
             all_lines.extend(commands)
-            all_lines.append("mgmt_cli publish")
             total_commands += len(commands)
         
         OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)

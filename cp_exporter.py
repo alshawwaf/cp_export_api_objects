@@ -37,7 +37,7 @@ def filter_dynamic_modules(modules):
     return clean_modules
 
 
-def _add_rulebase_to_cli(client, cli_exporter, layer):
+def _add_rulebase_to_cli(client, cli_exporter, layer, has_default_cleanup=False):
     """
     Generate CLI commands for access rules directly from the rulebase API response.
     
@@ -77,14 +77,15 @@ def _add_rulebase_to_cli(client, cli_exporter, layer):
             elif entry.get('type') == 'access-rule':
                 rule_name = entry.get('name') or f"rule # {entry.get('rule-number', 'unknown')}"
                 
-                # Skip cleanup rules
+                # Mark cleanup rules instead of skipping them
+                is_cleanup = False
                 if rule_name in ['Cleanup rule', 'Cleanup']:
-                    continue
+                    is_cleanup = True
                 
                 rule_data = {
                     'layer': current_layer,
                     'name': rule_name,
-                    'position': entry.get('rule-number'),
+                    'position': 'bottom',
                     'source': [item['name'] for item in entry.get('source', [])],
                     'source-negate': entry.get('source-negate', False),
                     'destination': [item['name'] for item in entry.get('destination', [])],
@@ -96,6 +97,8 @@ def _add_rulebase_to_cli(client, cli_exporter, layer):
                     'enabled': entry.get('enabled', True),
                     'comments': entry.get('comments', ''),
                     'install-on': [item['name'] for item in entry.get('install-on', [])],
+                    'is_cleanup': is_cleanup,
+                    'has_default_cleanup': has_default_cleanup
                 }
                 
                 # Handle "Inner Layer" -> "Apply Layer"
@@ -227,7 +230,26 @@ def main():
                 
                 # Also generate CLI commands for rules in this layer
                 if cli_exporter:
-                    _add_rulebase_to_cli(client, cli_exporter, layer)
+                    # Capture the layer object itself for CLI export (blades enablement)
+                    # Filter and clean to ensure only valid CLI fields are used
+                    clean_layer = parser.filter_fields_for_cli('access-layer', layer_obj)
+                    parser.remove_internal_fields(clean_layer)
+                    
+                    # Force enablement of critical blades in CLI command (needed for rule import on target SMS)
+                    # Note: 'ips', 'threat-prevention', 'user-check' are not valid for add access-layer
+                    clean_layer['applications-and-url-filtering'] = True
+                    clean_layer['firewall'] = True
+                    clean_layer['content-awareness'] = True
+                    clean_layer.pop('ips', None)
+                    clean_layer.pop('threat-prevention', None)
+                    clean_layer.pop('user-check', None)
+                    
+                    log.info(f"Adding access-layer to CLI: {clean_layer.get('name')} with blades enabled")
+                    cli_exporter.add_objects('access-layer', [clean_layer])
+                    
+                    # Pass the add-default-rule property to rule generation
+                    has_default_cleanup = clean_layer.get('add-default-rule', False)
+                    _add_rulebase_to_cli(client, cli_exporter, layer, has_default_cleanup=has_default_cleanup)
                     
             log.info('Rulebase exported successfully')
         else:

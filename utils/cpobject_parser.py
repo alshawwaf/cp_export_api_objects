@@ -37,6 +37,14 @@ class ParseObjects:
             return db_object
         
         valid_fields = set(self.field_whitelist[obj_type])
+        
+        # Custom overrides for specific types where spec might be missing common fields
+        if obj_type == 'access-layer':
+            valid_fields.update([
+                'applications-and-url-filtering', 'content-awareness', 'mobile-access',
+                'firewall', 'ips', 'threat-prevention', 'user-check', 'add-default-rule'
+            ])
+            
         # Always preserve 'type' for downstream processing (will be removed later)
         valid_fields.add('type')
         filtered = {}
@@ -101,7 +109,34 @@ class ParseObjects:
         # we need to match the fields from the DB and the fields from the API reference
         for db_object in db_objects:
             log.debug(db_object)
-            if db_object['meta-info']['last-modifier'] != "System":
+            # Skip system objects and read-only objects (topology, etc) to avoid conflicts on import
+            is_system = db_object.get('meta-info', {}).get('last-modifier') == "System"
+            is_read_only = db_object.get('read-only', False)
+            
+            # Aggressive topology filtering: skip objects that look like interface-managed or specific gateway topology
+            # e.g. "Net_10.101.205.126" in the user's case might be topology-linked.
+            # Also common patterns like name containing "_eth", "bond", "vlan" or gateway names + interface.
+            name = db_object.get('name', '')
+            is_topology_name = False
+            # Check for interface-like patterns or auto-generated topology names
+            # Net_X.X.X.X is a common auto-gen pattern for interface networks
+            import re
+            # Check for EXACT auto-gen pattern (usually starts with Capital N)
+            ip_pattern = r'^Net_\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$'
+            is_topology_name = False
+            
+            # Use stricter patterns for filtering to avoid skipping user objects
+            if cp_ansible_command == 'network':
+                # Only filter if it matches the EXACT Capitalized auto-gen pattern
+                # or contains specific interface keywords like loopback/mgmt
+                if re.match(ip_pattern, name) or any(p in name.lower() for p in ['loopback', 'mgmt_']):
+                    is_topology_name = True
+            
+            # for groups/others, only skip if they look like system-managed eth/bond
+            elif any(p in name.lower() for p in ['_eth', 'bond_eth', 'vlan_eth']):
+                is_topology_name = True
+            
+            if not is_system and not is_read_only and not is_topology_name:
 
                 # TODO create documentations (json export) for handling objects with API/Ansible limitations
                 docs_objects = ['access-role', 'simple-gateway',
@@ -124,7 +159,22 @@ class ParseObjects:
                     cp_ansible_command, db_object_fields_deleted)
 
                 # >>> CLI PATH: Capture clean data BEFORE Ansible transformations <<<
-                cli_clean_objects.append(copy.deepcopy(db_object_fields_filtered))
+                cli_data = copy.deepcopy(db_object_fields_filtered)
+                
+                # Special handling for VPN shared secrets in CLI (mandatory for 'add')
+                if 'vpn-community' in cp_ansible_command and cli_data.get('use-shared-secret') is True:
+                    # Remove top-level shared-secret if present, it's not valid for vpn-community-* add/set
+                    cli_data.pop('shared-secret', None)
+                    
+                    if 'shared-secrets' in cli_data:
+                        for entry in cli_data['shared-secrets']:
+                            if 'shared-secret' not in entry:
+                                entry['shared-secret'] = "CheckPoint123@"
+                    else:
+                        # Fallback if list is missing but flag is true
+                        cli_data['shared-secrets'] = [{'shared-secret': "CheckPoint123@"}]
+
+                cli_clean_objects.append(cli_data)
 
                 # >>> ANSIBLE PATH: Ansible-specific transformations <<<
                 # 4. Convert dashes to underscores ONLY at the end
