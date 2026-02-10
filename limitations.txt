@@ -3,7 +3,7 @@
 This list reflects remaining constraints and gaps when exporting policies across Check Point versions R80.40 through R82.
 
 ## Object Constraints
-- **Application Control**: The application-site object may miss the primary-category field in environments running R80.x (API 1.6) due to API spec visibility constraints.
+- **Application Control**: The application-site object may miss the primary-category field in environments running R80.x (API 1.6) due to API spec visibility constraints. This was significantly improved in API v1.7 (R81) and later versions, where the field is consistently available in show-objects output.
 - **Field Whitelisting**: Certain complex objects (access-role, simple-gateway, vpn-community-meshed, vpn-community-star) are exported with a curated list of fields to ensure import stability across API versions from 1.6 to 2.x.
 - **Ansible Mappings**: The Management API uses remote-access-client (singular), whereas Ansible modules (notably in R81.x) typically expect remote-access-clients (plural).
 
