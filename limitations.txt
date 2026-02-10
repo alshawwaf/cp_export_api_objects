@@ -1,17 +1,15 @@
-# Check Point API Exporter - Current Limitations
+# Check Point API Exporter - Ecosystem Constraints
 
-This list reflects remaining constraints and gaps when exporting policies across Check Point versions R80.40 through R82.
+This document lists intrinsic constraints and environmental requirements that persist regardless of the Management API version in use (including R81.x and R82).
 
-## Object Constraints
-- **Application Control**: The application-site object may miss the primary-category field in environments running R80.x (API 1.6) due to API spec visibility constraints. This was significantly improved in API v1.7 (R81) and later versions, where the field is consistently available in show-objects output.
-- **Field Whitelisting**: Certain complex objects (access-role, simple-gateway, vpn-community-meshed, vpn-community-star) are exported with a curated list of fields to ensure import stability across API versions from 1.6 to 2.x.
-- **Ansible Mappings**: The Management API uses remote-access-client (singular), whereas Ansible modules (notably in R81.x) typically expect remote-access-clients (plural).
+## Ansible Module Mappings
+- **Naming Mismatch**: The Check Point Management API uses singular types (e.g., remote-access-client), whereas the official Ansible modules expect plural names (e.g., remote-access-clients). This requires manual mapping in automation playbooks.
 
-## Access Rule Limitations
-- **Advanced Parameters**: The vpn and content (Content Awareness) settings are currently excluded from the export tasks.
-- **Ansible Rule Names**: Using the name "Management" for an access rule can cause execution failures when using the cp_mgmt_access_rule Ansible module.
-- **Updatable Objects**: Rules referencing objects such as "Office365 Services" require the target Management server (R80.40+) to have an active internet connection and an updated updatable objects database.
+## Reserved Object and Rule Names
+- **Management Conflict**: Using the name "Management" for an access rule or object can cause execution failures within the `cp_mgmt_access_rule` Ansible module due to internal reserved-word logic.
 
-## Implementation Best Practices
-- **Sequential Import**: When using Ansible, use loops to import tasks in order to prevent dependency errors.
-- **CLI Import Robustness**: For large-scale policies on R82 (API 2.x), use the generated import_mgmt_cli.txt file for the most reliable import experience, as it bypasses Ansible module overhead.
+## Environmental Requirements
+- **Updatable Objects**: Rules referencing dynamic objects (e.g., "Office365 Services") require the target Management server to have an active DNS configuration and internet access to populate its local database. This is a system connectivity requirement, not an API limitation.
+
+## Field Stability
+- **Internal Whitelisting**: Complex objects (access-role, simple-gateway, vpn-community-*) contain internal and read-only fields that cause import failures if passed directly to an `add` command. The exporter maintains a curated whitelist to ensure cross-version import stability.
