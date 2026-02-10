@@ -1,7 +1,7 @@
 logger_main - INFO - Logger created
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/login HTTP/1.1" 200 None
-logger_main - INFO - Login successful, SID: unhMjIH0zjQfaOLdML84pE9epA5AgaupFcXYvRhzGJI, API Version: 2.0.1
+logger_main - INFO - Login successful, SID: dqSjrk9oRuwzkkC3eki_mOS_MBv6dzCZld5Sfjm0YKI, API Version: 2.0.1
 logger_main - INFO - Authenticated to 203.0.113.234 (Detected API Version: 2.0.1)
 logger_main - INFO - Using dynamic spec URL: https://sc1.checkpoint.com/documents/latest/APIs/data/v2.0.1/dynamic/apis.json
 logger_main - INFO - Fetching API spec from https://sc1.checkpoint.com/documents/latest/APIs/data/v2.0.1/dynamic/apis.json
@@ -13,465 +13,499 @@ logger_main - INFO - Section metadata missing in spec, using manual mapping for 
 logger_main - INFO - Found 8 target object types for QA: ['host', 'network', 'group', 'address-range', 'multicast-address-range', 'group-with-exclusion', 'dns-domain', 'wildcard']
 logger_main - INFO - --- Starting exhaustive QA for object type: host ---
 logger_main - INFO - Generated 3 'Full' test variants for host.
-logger_main - INFO - Testing Variant 1/3: QA_HOST_0_457
-logger_main - INFO -   Attempt 1/5: keys=['interfaces', 'nat-settings', 'host-servers', 'name', 'set-if-exists', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'ip-address']
+logger_main - INFO - Testing Variant 1/3: QA_HOST_0_689
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-host HTTP/1.1" 404 None
-logger_main - INFO -   Attempt 1: [Self-Healing] Analysing API feedback for correction...
 logger_main - INFO -   FIX: Removed host-servers.web-server-config.protected-by
 logger_main - INFO -   FIX: Simplified interfaces to [] (name treated as reference)
-logger_main - INFO -   Attempt 2/5: keys=['interfaces', 'nat-settings', 'host-servers', 'name', 'set-if-exists', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'ip-address']
+logger_main - INFO -   Optimizing payload for accuracy (pass 2)...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-host HTTP/1.1" 200 None
-logger_main - INFO -   Attempt 2: ADD succeeded \u2705
+logger_main - INFO -   ADD: [0.57s] \u2705
+logger_main - INFO -   Executing SET optimization...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/set-host HTTP/1.1" 200 None
-logger_main - INFO -   SET: \u2705
+logger_main - INFO -   SET: [0.21s] \u2705
+logger_main - INFO -   Executing SHOW verification...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/show-host HTTP/1.1" 200 None
-logger_main - INFO -   SHOW: \u2705
+logger_main - INFO -   SHOW: [0.08s] \u2705
+logger_main - INFO -   Executing DELETE cleanup...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/delete-host HTTP/1.1" 200 None
-logger_main - INFO -   DELETE: \u2705
-logger_main - INFO - Finished lifecycle for QA_HOST_0_457 (add took 2 attempt(s))
-logger_main - INFO - Testing Variant 2/3: QA_HOST_1_637
-logger_main - INFO -   Attempt 1/5: keys=['interfaces', 'nat-settings', 'host-servers', 'name', 'set-if-exists', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'ipv4-address']
+logger_main - INFO -   DELETE: [0.36s] \u2705
+logger_main - INFO - Finished lifecycle for QA_HOST_0_689 (Completed in 1.21s)
+logger_main - INFO - Testing Variant 2/3: QA_HOST_1_977
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-host HTTP/1.1" 200 None
-logger_main - INFO -   Attempt 1: ADD succeeded \u2705
+logger_main - INFO -   ADD: [0.46s] \u2705
+logger_main - INFO -   Executing SET optimization...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/set-host HTTP/1.1" 200 None
-logger_main - INFO -   SET: \u2705
+logger_main - INFO -   SET: [0.13s] \u2705
+logger_main - INFO -   Executing SHOW verification...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/show-host HTTP/1.1" 200 None
-logger_main - INFO -   SHOW: \u2705
+logger_main - INFO -   SHOW: [0.10s] \u2705
+logger_main - INFO -   Executing DELETE cleanup...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/delete-host HTTP/1.1" 200 None
-logger_main - INFO -   DELETE: \u2705
-logger_main - INFO - Finished lifecycle for QA_HOST_1_637 (add took 1 attempt(s))
-logger_main - INFO - Testing Variant 3/3: QA_HOST_2_384
-logger_main - INFO -   Attempt 1/5: keys=['interfaces', 'nat-settings', 'host-servers', 'name', 'set-if-exists', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'ipv6-address']
+logger_main - INFO -   DELETE: [0.27s] \u2705
+logger_main - INFO - Finished lifecycle for QA_HOST_1_977 (Completed in 0.96s)
+logger_main - INFO - Testing Variant 3/3: QA_HOST_2_334
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-host HTTP/1.1" 200 None
-logger_main - INFO -   Attempt 1: ADD succeeded \u2705
+logger_main - INFO -   ADD: [0.52s] \u2705
+logger_main - INFO -   Executing SET optimization...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/set-host HTTP/1.1" 200 None
-logger_main - INFO -   SET: \u2705
+logger_main - INFO -   SET: [0.15s] \u2705
+logger_main - INFO -   Executing SHOW verification...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/show-host HTTP/1.1" 200 None
-logger_main - INFO -   SHOW: \u2705
+logger_main - INFO -   SHOW: [0.09s] \u2705
+logger_main - INFO -   Executing DELETE cleanup...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/delete-host HTTP/1.1" 200 None
-logger_main - INFO -   DELETE: \u2705
-logger_main - INFO - Finished lifecycle for QA_HOST_2_384 (add took 1 attempt(s))
+logger_main - INFO -   DELETE: [0.25s] \u2705
+logger_main - INFO - Finished lifecycle for QA_HOST_2_334 (Completed in 1.01s)
 logger_main - INFO - --- Starting exhaustive QA for object type: network ---
 logger_main - INFO - Generated 6 'Full' test variants for network.
-logger_main - INFO - Testing Variant 1/6: QA_NETWORK_0_688
-logger_main - INFO -   Attempt 1/5: keys=['nat-settings', 'broadcast', 'name', 'set-if-exists', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'subnet', 'mask-length']
+logger_main - INFO - Testing Variant 1/6: QA_NETWORK_0_919
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-network HTTP/1.1" 200 None
-logger_main - INFO -   Attempt 1: ADD succeeded \u2705
+logger_main - INFO -   ADD: [0.63s] \u2705
+logger_main - INFO -   Executing SET optimization...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/set-network HTTP/1.1" 200 None
-logger_main - INFO -   SET: \u2705
+logger_main - INFO -   SET: [0.12s] \u2705
+logger_main - INFO -   Executing SHOW verification...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/show-network HTTP/1.1" 200 None
-logger_main - INFO -   SHOW: \u2705
+logger_main - INFO -   SHOW: [0.07s] \u2705
+logger_main - INFO -   Executing DELETE cleanup...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/delete-network HTTP/1.1" 200 None
-logger_main - INFO -   DELETE: \u2705
-logger_main - INFO - Finished lifecycle for QA_NETWORK_0_688 (add took 1 attempt(s))
-logger_main - INFO - Testing Variant 2/6: QA_NETWORK_1_721
-logger_main - INFO -   Attempt 1/5: keys=['nat-settings', 'broadcast', 'name', 'set-if-exists', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'mask-length', 'subnet4']
+logger_main - INFO -   DELETE: [0.41s] \u2705
+logger_main - INFO - Finished lifecycle for QA_NETWORK_0_919 (Completed in 1.23s)
+logger_main - INFO - Testing Variant 2/6: QA_NETWORK_1_988
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-network HTTP/1.1" 400 None
-logger_main - INFO -   Attempt 1: [Self-Healing] Analysing API feedback for correction...
 logger_main - INFO -   FIX: Added mask-length4=24 for subnet4
-logger_main - INFO -   Attempt 2/5: keys=['nat-settings', 'broadcast', 'name', 'set-if-exists', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'mask-length', 'subnet4', 'mask-length4']
+logger_main - INFO -   Optimizing payload for accuracy (pass 2)...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-network HTTP/1.1" 200 None
-logger_main - INFO -   Attempt 2: ADD succeeded \u2705
+logger_main - INFO -   ADD: [0.60s] \u2705
+logger_main - INFO -   Executing SET optimization...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/set-network HTTP/1.1" 200 None
-logger_main - INFO -   SET: \u2705
+logger_main - INFO -   SET: [0.12s] \u2705
+logger_main - INFO -   Executing SHOW verification...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/show-network HTTP/1.1" 200 None
-logger_main - INFO -   SHOW: \u2705
+logger_main - INFO -   SHOW: [0.07s] \u2705
+logger_main - INFO -   Executing DELETE cleanup...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/delete-network HTTP/1.1" 200 None
-logger_main - INFO -   DELETE: \u2705
-logger_main - INFO - Finished lifecycle for QA_NETWORK_1_721 (add took 2 attempt(s))
-logger_main - INFO - Testing Variant 3/6: QA_NETWORK_2_134
-logger_main - INFO -   Attempt 1/5: keys=['nat-settings', 'broadcast', 'name', 'set-if-exists', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'mask-length', 'subnet6']
+logger_main - INFO -   DELETE: [0.33s] \u2705
+logger_main - INFO - Finished lifecycle for QA_NETWORK_1_988 (Completed in 1.13s)
+logger_main - INFO - Testing Variant 3/6: QA_NETWORK_2_196
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-network HTTP/1.1" 400 None
-logger_main - INFO -   Attempt 1: [Self-Healing] Analysing API feedback for correction...
 logger_main - INFO -   FIX: Added mask-length6=64 for subnet6
-logger_main - INFO -   Attempt 2/5: keys=['nat-settings', 'broadcast', 'name', 'set-if-exists', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'mask-length', 'subnet6', 'mask-length6']
+logger_main - INFO -   Optimizing payload for accuracy (pass 2)...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-network HTTP/1.1" 200 None
-logger_main - INFO -   Attempt 2: ADD succeeded \u2705
+logger_main - INFO -   ADD: [0.64s] \u2705
+logger_main - INFO -   Executing SET optimization...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/set-network HTTP/1.1" 200 None
-logger_main - INFO -   SET: \u2705
+logger_main - INFO -   SET: [0.09s] \u2705
+logger_main - INFO -   Executing SHOW verification...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/show-network HTTP/1.1" 200 None
-logger_main - INFO -   SHOW: \u2705
+logger_main - INFO -   SHOW: [0.07s] \u2705
+logger_main - INFO -   Executing DELETE cleanup...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/delete-network HTTP/1.1" 200 None
-logger_main - INFO -   DELETE: \u2705
-logger_main - INFO - Finished lifecycle for QA_NETWORK_2_134 (add took 2 attempt(s))
-logger_main - INFO - Testing Variant 4/6: QA_NETWORK_3_450
-logger_main - INFO -   Attempt 1/5: keys=['nat-settings', 'broadcast', 'name', 'set-if-exists', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'subnet', 'mask-length4']
+logger_main - INFO -   DELETE: [0.35s] \u2705
+logger_main - INFO - Finished lifecycle for QA_NETWORK_2_196 (Completed in 1.15s)
+logger_main - INFO - Testing Variant 4/6: QA_NETWORK_3_682
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-network HTTP/1.1" 200 None
-logger_main - INFO -   Attempt 1: ADD succeeded \u2705
+logger_main - INFO -   ADD: [0.47s] \u2705
+logger_main - INFO -   Executing SET optimization...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/set-network HTTP/1.1" 200 None
-logger_main - INFO -   SET: \u2705
+logger_main - INFO -   SET: [0.10s] \u2705
+logger_main - INFO -   Executing SHOW verification...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/show-network HTTP/1.1" 200 None
-logger_main - INFO -   SHOW: \u2705
+logger_main - INFO -   SHOW: [0.07s] \u2705
+logger_main - INFO -   Executing DELETE cleanup...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/delete-network HTTP/1.1" 200 None
-logger_main - INFO -   DELETE: \u2705
-logger_main - INFO - Finished lifecycle for QA_NETWORK_3_450 (add took 1 attempt(s))
-logger_main - INFO - Testing Variant 5/6: QA_NETWORK_4_910
-logger_main - INFO -   Attempt 1/5: keys=['nat-settings', 'broadcast', 'name', 'set-if-exists', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'subnet', 'mask-length6']
+logger_main - INFO -   DELETE: [0.39s] \u2705
+logger_main - INFO - Finished lifecycle for QA_NETWORK_3_682 (Completed in 1.03s)
+logger_main - INFO - Testing Variant 5/6: QA_NETWORK_4_446
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-network HTTP/1.1" 400 None
-logger_main - INFO -   Attempt 1: [Self-Healing] Analysing API feedback for correction...
 logger_main - INFO -   FIX: Replaced mask-length6 with mask-length=24 for generic subnet
-logger_main - INFO -   Attempt 2/5: keys=['nat-settings', 'broadcast', 'name', 'set-if-exists', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'subnet', 'mask-length']
+logger_main - INFO -   Optimizing payload for accuracy (pass 2)...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-network HTTP/1.1" 200 None
-logger_main - INFO -   Attempt 2: ADD succeeded \u2705
+logger_main - INFO -   ADD: [0.63s] \u2705
+logger_main - INFO -   Executing SET optimization...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/set-network HTTP/1.1" 200 None
-logger_main - INFO -   SET: \u2705
+logger_main - INFO -   SET: [0.12s] \u2705
+logger_main - INFO -   Executing SHOW verification...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/show-network HTTP/1.1" 200 None
-logger_main - INFO -   SHOW: \u2705
+logger_main - INFO -   SHOW: [0.07s] \u2705
+logger_main - INFO -   Executing DELETE cleanup...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/delete-network HTTP/1.1" 200 None
-logger_main - INFO -   DELETE: \u2705
-logger_main - INFO - Finished lifecycle for QA_NETWORK_4_910 (add took 2 attempt(s))
-logger_main - INFO - Testing Variant 6/6: QA_NETWORK_5_561
-logger_main - INFO -   Attempt 1/5: keys=['nat-settings', 'broadcast', 'name', 'set-if-exists', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'subnet', 'subnet-mask']
+logger_main - INFO -   DELETE: [0.36s] \u2705
+logger_main - INFO - Finished lifecycle for QA_NETWORK_4_446 (Completed in 1.18s)
+logger_main - INFO - Testing Variant 6/6: QA_NETWORK_5_839
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-network HTTP/1.1" 400 None
-logger_main - INFO -   Attempt 1: [Self-Healing] Analysing API feedback for correction...
 logger_main - INFO -   FIX: Corrected subnet-mask to 255.255.0.0
-logger_main - INFO -   Attempt 2/5: keys=['nat-settings', 'broadcast', 'name', 'set-if-exists', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'subnet', 'subnet-mask']
+logger_main - INFO -   Optimizing payload for accuracy (pass 2)...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-network HTTP/1.1" 200 None
-logger_main - INFO -   Attempt 2: ADD succeeded \u2705
+logger_main - INFO -   ADD: [1.74s] \u2705
+logger_main - INFO -   Executing SET optimization...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/set-network HTTP/1.1" 200 None
-logger_main - INFO -   SET: \u2705
+logger_main - INFO -   SET: [0.10s] \u2705
+logger_main - INFO -   Executing SHOW verification...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/show-network HTTP/1.1" 200 None
-logger_main - INFO -   SHOW: \u2705
+logger_main - INFO -   SHOW: [0.08s] \u2705
+logger_main - INFO -   Executing DELETE cleanup...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/delete-network HTTP/1.1" 200 None
-logger_main - INFO -   DELETE: \u2705
-logger_main - INFO - Finished lifecycle for QA_NETWORK_5_561 (add took 2 attempt(s))
+logger_main - INFO -   DELETE: [0.50s] \u2705
+logger_main - INFO - Finished lifecycle for QA_NETWORK_5_839 (Completed in 2.42s)
 logger_main - INFO - --- Starting exhaustive QA for object type: group ---
 logger_main - INFO - Generated 1 'Full' test variants for group.
-logger_main - INFO - Testing Variant 1/1: QA_GROUP_0_752
-logger_main - INFO -   Attempt 1/5: keys=['members', 'name', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors']
+logger_main - INFO - Testing Variant 1/1: QA_GROUP_0_480
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-group HTTP/1.1" 200 None
-logger_main - INFO -   Attempt 1: ADD succeeded \u2705
+logger_main - INFO -   ADD: [0.09s] \u2705
+logger_main - INFO -   Executing SET optimization...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/set-group HTTP/1.1" 200 None
-logger_main - INFO -   SET: \u2705
+logger_main - INFO -   SET: [0.13s] \u2705
+logger_main - INFO -   Executing SHOW verification...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/show-group HTTP/1.1" 200 None
-logger_main - INFO -   SHOW: \u2705
+logger_main - INFO -   SHOW: [0.07s] \u2705
+logger_main - INFO -   Executing DELETE cleanup...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/delete-group HTTP/1.1" 200 None
-logger_main - INFO -   DELETE: \u2705
-logger_main - INFO - Finished lifecycle for QA_GROUP_0_752 (add took 1 attempt(s))
+logger_main - INFO -   DELETE: [0.11s] \u2705
+logger_main - INFO - Finished lifecycle for QA_GROUP_0_480 (Completed in 0.40s)
 logger_main - INFO - --- Starting exhaustive QA for object type: address-range ---
 logger_main - INFO - Generated 5 'Full' test variants for address-range.
-logger_main - INFO - Testing Variant 1/5: QA_ADDRESS-RANGE_0_236
-logger_main - INFO -   Attempt 1/5: keys=['nat-settings', 'name', 'set-if-exists', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'ip-address-first', 'ip-address-last']
+logger_main - INFO - Testing Variant 1/5: QA_ADDRESS-RANGE_0_180
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-address-range HTTP/1.1" 200 None
-logger_main - INFO -   Attempt 1: ADD succeeded \u2705
+logger_main - INFO -   ADD: [0.79s] \u2705
+logger_main - INFO -   Executing SET optimization...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/set-address-range HTTP/1.1" 200 None
-logger_main - INFO -   SET: \u2705
+logger_main - INFO -   SET: [0.10s] \u2705
+logger_main - INFO -   Executing SHOW verification...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/show-address-range HTTP/1.1" 200 None
-logger_main - INFO -   SHOW: \u2705
+logger_main - INFO -   SHOW: [0.10s] \u2705
+logger_main - INFO -   Executing DELETE cleanup...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/delete-address-range HTTP/1.1" 200 None
-logger_main - INFO -   DELETE: \u2705
-logger_main - INFO - Finished lifecycle for QA_ADDRESS-RANGE_0_236 (add took 1 attempt(s))
-logger_main - INFO - Testing Variant 2/5: QA_ADDRESS-RANGE_1_341
-logger_main - INFO -   Attempt 1/5: keys=['nat-settings', 'name', 'set-if-exists', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'ipv4-address-first', 'ipv4-address-last']
+logger_main - INFO -   DELETE: [0.42s] \u2705
+logger_main - INFO - Finished lifecycle for QA_ADDRESS-RANGE_0_180 (Completed in 1.41s)
+logger_main - INFO - Testing Variant 2/5: QA_ADDRESS-RANGE_1_279
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-address-range HTTP/1.1" 200 None
-logger_main - INFO -   Attempt 1: ADD succeeded \u2705
+logger_main - INFO -   ADD: [0.65s] \u2705
+logger_main - INFO -   Executing SET optimization...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/set-address-range HTTP/1.1" 200 None
-logger_main - INFO -   SET: \u2705
+logger_main - INFO -   SET: [0.13s] \u2705
+logger_main - INFO -   Executing SHOW verification...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/show-address-range HTTP/1.1" 200 None
-logger_main - INFO -   SHOW: \u2705
+logger_main - INFO -   SHOW: [0.07s] \u2705
+logger_main - INFO -   Executing DELETE cleanup...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/delete-address-range HTTP/1.1" 200 None
-logger_main - INFO -   DELETE: \u2705
-logger_main - INFO - Finished lifecycle for QA_ADDRESS-RANGE_1_341 (add took 1 attempt(s))
-logger_main - INFO - Testing Variant 3/5: QA_ADDRESS-RANGE_2_882
-logger_main - INFO -   Attempt 1/5: keys=['nat-settings', 'name', 'set-if-exists', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'ipv6-address-first', 'ipv6-address-last']
-urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
-urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-address-range HTTP/1.1" 200 None
-logger_main - INFO -   Attempt 1: ADD succeeded \u2705
-urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
-urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/set-address-range HTTP/1.1" 200 None
-logger_main - INFO -   SET: \u2705
-urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
-urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/show-address-range HTTP/1.1" 200 None
-logger_main - INFO -   SHOW: \u2705
-urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
-urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/delete-address-range HTTP/1.1" 200 None
-logger_main - INFO -   DELETE: \u2705
-logger_main - INFO - Finished lifecycle for QA_ADDRESS-RANGE_2_882 (add took 1 attempt(s))
-logger_main - INFO - Testing Variant 4/5: QA_ADDRESS-RANGE_3_882
-logger_main - INFO -   Attempt 1/5: keys=['nat-settings', 'name', 'set-if-exists', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'ipv4-address-last', 'ipv4-address-first']
-urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
-urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-address-range HTTP/1.1" 200 None
-logger_main - INFO -   Attempt 1: ADD succeeded \u2705
-urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
-urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/set-address-range HTTP/1.1" 200 None
-logger_main - INFO -   SET: \u2705
-urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
-urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/show-address-range HTTP/1.1" 200 None
-logger_main - INFO -   SHOW: \u2705
-urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
-urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/delete-address-range HTTP/1.1" 200 None
-logger_main - INFO -   DELETE: \u2705
-logger_main - INFO - Finished lifecycle for QA_ADDRESS-RANGE_3_882 (add took 1 attempt(s))
-logger_main - INFO - Testing Variant 5/5: QA_ADDRESS-RANGE_4_331
-logger_main - INFO -   Attempt 1/5: keys=['nat-settings', 'name', 'set-if-exists', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'ipv6-address-last', 'ipv6-address-first']
+logger_main - INFO -   DELETE: [0.49s] \u2705
+logger_main - INFO - Finished lifecycle for QA_ADDRESS-RANGE_1_279 (Completed in 1.35s)
+logger_main - INFO - Testing Variant 3/5: QA_ADDRESS-RANGE_2_700
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-address-range HTTP/1.1" 400 None
-logger_main - INFO -   Attempt 1: [Self-Healing] Analysing API feedback for correction...
 logger_main - INFO -   FIX: Removed 'details-level' (validation issue)
-logger_main - INFO -   Attempt 2/5: keys=['nat-settings', 'name', 'set-if-exists', 'color', 'comments', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'ipv6-address-last', 'ipv6-address-first']
+logger_main - INFO -   Optimizing payload for accuracy (pass 2)...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-address-range HTTP/1.1" 400 None
-logger_main - INFO -   Attempt 2: [Self-Healing] Analysing API feedback for correction...
 logger_main - INFO -   FIX: Removed non-essential 'set-if-exists' to resolve validation
-logger_main - INFO -   Attempt 3/5: keys=['nat-settings', 'name', 'color', 'comments', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'ipv6-address-last', 'ipv6-address-first']
+logger_main - INFO -   Optimizing payload for accuracy (pass 3)...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-address-range HTTP/1.1" 400 None
-logger_main - INFO -   Attempt 3: [Self-Healing] Analysing API feedback for correction...
 logger_main - INFO -   FIX: Removed non-essential 'color' to resolve validation
-logger_main - INFO -   Attempt 4/5: keys=['nat-settings', 'name', 'comments', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'ipv6-address-last', 'ipv6-address-first']
+logger_main - INFO -   Optimizing payload for accuracy (pass 4)...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-address-range HTTP/1.1" 400 None
-logger_main - INFO -   Attempt 4: [Self-Healing] Analysing API feedback for correction...
 logger_main - INFO -   FIX: Removed non-essential 'comments' to resolve validation
-logger_main - INFO -   Attempt 5/5: keys=['nat-settings', 'name', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'ipv6-address-last', 'ipv6-address-first']
+logger_main - INFO -   Optimizing payload for accuracy (pass 5)...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-address-range HTTP/1.1" 400 None
-logger_main - INFO -   Attempt 5: [Self-Healing] Analysing API feedback for correction...
 logger_main - INFO -   FIX: Removed non-essential 'tags' to resolve validation
-logger_main - ERROR - Add-address-range EXHAUSTED retries for variant 4: Validation failed with 1 blocking-error
+logger_main - ERROR -   ADD: [0.39s] \u274c
+logger_main - ERROR - Add-address-range EXHAUSTED retries for variant 2: Validation failed with 1 blocking-error
+logger_main - INFO - Testing Variant 4/5: QA_ADDRESS-RANGE_3_151
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
+urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-address-range HTTP/1.1" 200 None
+logger_main - INFO -   ADD: [0.47s] \u2705
+logger_main - INFO -   Executing SET optimization...
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
+urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/set-address-range HTTP/1.1" 200 None
+logger_main - INFO -   SET: [0.13s] \u2705
+logger_main - INFO -   Executing SHOW verification...
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
+urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/show-address-range HTTP/1.1" 200 None
+logger_main - INFO -   SHOW: [0.08s] \u2705
+logger_main - INFO -   Executing DELETE cleanup...
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
+urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/delete-address-range HTTP/1.1" 200 None
+logger_main - INFO -   DELETE: [0.41s] \u2705
+logger_main - INFO - Finished lifecycle for QA_ADDRESS-RANGE_3_151 (Completed in 1.08s)
+logger_main - INFO - Testing Variant 5/5: QA_ADDRESS-RANGE_4_902
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
+urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-address-range HTTP/1.1" 200 None
+logger_main - INFO -   ADD: [0.43s] \u2705
+logger_main - INFO -   Executing SET optimization...
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
+urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/set-address-range HTTP/1.1" 200 None
+logger_main - INFO -   SET: [0.10s] \u2705
+logger_main - INFO -   Executing SHOW verification...
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
+urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/show-address-range HTTP/1.1" 200 None
+logger_main - INFO -   SHOW: [0.07s] \u2705
+logger_main - INFO -   Executing DELETE cleanup...
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
+urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/delete-address-range HTTP/1.1" 200 None
+logger_main - INFO -   DELETE: [0.43s] \u2705
+logger_main - INFO - Finished lifecycle for QA_ADDRESS-RANGE_4_902 (Completed in 1.04s)
 logger_main - INFO - --- Starting exhaustive QA for object type: multicast-address-range ---
 logger_main - INFO - Generated 7 'Full' test variants for multicast-address-range.
-logger_main - INFO - Testing Variant 1/7: QA_MULTICAST-ADDRESS-RANGE_0_533
-logger_main - INFO -   Attempt 1/5: keys=['ip-address', 'ip-address-first', 'ip-address-last', 'name', 'set-if-exists', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors']
+logger_main - INFO - Testing Variant 1/7: QA_MULTICAST-ADDRESS-RANGE_0_401
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-multicast-address-range HTTP/1.1" 400 None
-logger_main - INFO -   Attempt 1: [Self-Healing] Analysing API feedback for correction...
 logger_main - INFO -   FIX: Removed standalone 'ip-address' (keeping range pair)
-logger_main - INFO -   Attempt 2/5: keys=['ip-address-first', 'ip-address-last', 'name', 'set-if-exists', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors']
+logger_main - INFO -   Optimizing payload for accuracy (pass 2)...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-multicast-address-range HTTP/1.1" 200 None
-logger_main - INFO -   Attempt 2: ADD succeeded \u2705
+logger_main - INFO -   ADD: [0.17s] \u2705
+logger_main - INFO -   Executing SET optimization...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/set-multicast-address-range HTTP/1.1" 200 None
-logger_main - INFO -   SET: \u2705
+logger_main - INFO -   SET: [0.09s] \u2705
+logger_main - INFO -   Executing SHOW verification...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/show-multicast-address-range HTTP/1.1" 200 None
-logger_main - INFO -   SHOW: \u2705
+logger_main - INFO -   SHOW: [0.08s] \u2705
+logger_main - INFO -   Executing DELETE cleanup...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/delete-multicast-address-range HTTP/1.1" 200 None
-logger_main - INFO -   DELETE: \u2705
-logger_main - INFO - Finished lifecycle for QA_MULTICAST-ADDRESS-RANGE_0_533 (add took 2 attempt(s))
-logger_main - INFO - Testing Variant 2/7: QA_MULTICAST-ADDRESS-RANGE_1_124
-logger_main - INFO -   Attempt 1/5: keys=['ip-address-first', 'ip-address-last', 'name', 'set-if-exists', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'ipv4-address']
+logger_main - INFO -   DELETE: [0.13s] \u2705
+logger_main - INFO - Finished lifecycle for QA_MULTICAST-ADDRESS-RANGE_0_401 (Completed in 0.45s)
+logger_main - INFO - Testing Variant 2/7: QA_MULTICAST-ADDRESS-RANGE_1_173
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-multicast-address-range HTTP/1.1" 400 None
-logger_main - INFO -   Attempt 1: [Self-Healing] Analysing API feedback for correction...
 logger_main - INFO -   FIX: Removed generic range (ip-address-first/last), keeping versioned fields
-logger_main - INFO -   Attempt 2/5: keys=['name', 'set-if-exists', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'ipv4-address']
+logger_main - INFO -   Optimizing payload for accuracy (pass 2)...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-multicast-address-range HTTP/1.1" 200 None
-logger_main - INFO -   Attempt 2: ADD succeeded \u2705
+logger_main - INFO -   ADD: [0.18s] \u2705
+logger_main - INFO -   Executing SET optimization...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/set-multicast-address-range HTTP/1.1" 200 None
-logger_main - INFO -   SET: \u2705
+logger_main - INFO -   SET: [0.08s] \u2705
+logger_main - INFO -   Executing SHOW verification...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/show-multicast-address-range HTTP/1.1" 200 None
-logger_main - INFO -   SHOW: \u2705
+logger_main - INFO -   SHOW: [0.08s] \u2705
+logger_main - INFO -   Executing DELETE cleanup...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/delete-multicast-address-range HTTP/1.1" 200 None
-logger_main - INFO -   DELETE: \u2705
-logger_main - INFO - Finished lifecycle for QA_MULTICAST-ADDRESS-RANGE_1_124 (add took 2 attempt(s))
-logger_main - INFO - Testing Variant 3/7: QA_MULTICAST-ADDRESS-RANGE_2_263
-logger_main - INFO -   Attempt 1/5: keys=['ip-address-first', 'ip-address-last', 'name', 'set-if-exists', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'ipv6-address']
+logger_main - INFO -   DELETE: [0.10s] \u2705
+logger_main - INFO - Finished lifecycle for QA_MULTICAST-ADDRESS-RANGE_1_173 (Completed in 0.44s)
+logger_main - INFO - Testing Variant 3/7: QA_MULTICAST-ADDRESS-RANGE_2_201
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-multicast-address-range HTTP/1.1" 200 None
-logger_main - INFO -   Attempt 1: ADD succeeded \u2705
+logger_main - INFO -   ADD: [0.10s] \u2705
+logger_main - INFO -   Executing SET optimization...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/set-multicast-address-range HTTP/1.1" 200 None
-logger_main - INFO -   SET: \u2705
+logger_main - INFO -   SET: [0.08s] \u2705
+logger_main - INFO -   Executing SHOW verification...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/show-multicast-address-range HTTP/1.1" 200 None
-logger_main - INFO -   SHOW: \u2705
+logger_main - INFO -   SHOW: [0.07s] \u2705
+logger_main - INFO -   Executing DELETE cleanup...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/delete-multicast-address-range HTTP/1.1" 200 None
-logger_main - INFO -   DELETE: \u2705
-logger_main - INFO - Finished lifecycle for QA_MULTICAST-ADDRESS-RANGE_2_263 (add took 1 attempt(s))
-logger_main - INFO - Testing Variant 4/7: QA_MULTICAST-ADDRESS-RANGE_3_956
-logger_main - INFO -   Attempt 1/5: keys=['ip-address', 'name', 'set-if-exists', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'ipv4-address-first', 'ipv4-address-last']
+logger_main - INFO -   DELETE: [0.12s] \u2705
+logger_main - INFO - Finished lifecycle for QA_MULTICAST-ADDRESS-RANGE_2_201 (Completed in 0.37s)
+logger_main - INFO - Testing Variant 4/7: QA_MULTICAST-ADDRESS-RANGE_3_282
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-multicast-address-range HTTP/1.1" 400 None
-logger_main - INFO -   Attempt 1: [Self-Healing] Analysing API feedback for correction...
 logger_main - INFO -   FIX: Removed standalone 'ip-address' (keeping range pair)
-logger_main - INFO -   Attempt 2/5: keys=['name', 'set-if-exists', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'ipv4-address-first', 'ipv4-address-last']
+logger_main - INFO -   Optimizing payload for accuracy (pass 2)...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-multicast-address-range HTTP/1.1" 200 None
-logger_main - INFO -   Attempt 2: ADD succeeded \u2705
+logger_main - INFO -   ADD: [0.14s] \u2705
+logger_main - INFO -   Executing SET optimization...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/set-multicast-address-range HTTP/1.1" 200 None
-logger_main - INFO -   SET: \u2705
+logger_main - INFO -   SET: [0.09s] \u2705
+logger_main - INFO -   Executing SHOW verification...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/show-multicast-address-range HTTP/1.1" 200 None
-logger_main - INFO -   SHOW: \u2705
+logger_main - INFO -   SHOW: [0.07s] \u2705
+logger_main - INFO -   Executing DELETE cleanup...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/delete-multicast-address-range HTTP/1.1" 200 None
-logger_main - INFO -   DELETE: \u2705
-logger_main - INFO - Finished lifecycle for QA_MULTICAST-ADDRESS-RANGE_3_956 (add took 2 attempt(s))
-logger_main - INFO - Testing Variant 5/7: QA_MULTICAST-ADDRESS-RANGE_4_913
-logger_main - INFO -   Attempt 1/5: keys=['ip-address', 'name', 'set-if-exists', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'ipv6-address-first', 'ipv6-address-last']
+logger_main - INFO -   DELETE: [0.08s] \u2705
+logger_main - INFO - Finished lifecycle for QA_MULTICAST-ADDRESS-RANGE_3_282 (Completed in 0.38s)
+logger_main - INFO - Testing Variant 5/7: QA_MULTICAST-ADDRESS-RANGE_4_966
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-multicast-address-range HTTP/1.1" 200 None
-logger_main - INFO -   Attempt 1: ADD succeeded \u2705
+logger_main - INFO -   ADD: [0.09s] \u2705
+logger_main - INFO -   Executing SET optimization...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/set-multicast-address-range HTTP/1.1" 200 None
-logger_main - INFO -   SET: \u2705
+logger_main - INFO -   SET: [0.08s] \u2705
+logger_main - INFO -   Executing SHOW verification...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/show-multicast-address-range HTTP/1.1" 200 None
-logger_main - INFO -   SHOW: \u2705
+logger_main - INFO -   SHOW: [0.07s] \u2705
+logger_main - INFO -   Executing DELETE cleanup...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/delete-multicast-address-range HTTP/1.1" 200 None
-logger_main - INFO -   DELETE: \u2705
-logger_main - INFO - Finished lifecycle for QA_MULTICAST-ADDRESS-RANGE_4_913 (add took 1 attempt(s))
-logger_main - INFO - Testing Variant 6/7: QA_MULTICAST-ADDRESS-RANGE_5_442
-logger_main - INFO -   Attempt 1/5: keys=['ip-address', 'name', 'set-if-exists', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'ipv4-address-last', 'ipv4-address-first']
+logger_main - INFO -   DELETE: [0.09s] \u2705
+logger_main - INFO - Finished lifecycle for QA_MULTICAST-ADDRESS-RANGE_4_966 (Completed in 0.32s)
+logger_main - INFO - Testing Variant 6/7: QA_MULTICAST-ADDRESS-RANGE_5_494
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-multicast-address-range HTTP/1.1" 400 None
-logger_main - INFO -   Attempt 1: [Self-Healing] Analysing API feedback for correction...
 logger_main - INFO -   FIX: Removed standalone 'ip-address' (keeping range pair)
-logger_main - INFO -   Attempt 2/5: keys=['name', 'set-if-exists', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'ipv4-address-last', 'ipv4-address-first']
+logger_main - INFO -   Optimizing payload for accuracy (pass 2)...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-multicast-address-range HTTP/1.1" 200 None
-logger_main - INFO -   Attempt 2: ADD succeeded \u2705
+logger_main - INFO -   ADD: [0.14s] \u2705
+logger_main - INFO -   Executing SET optimization...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/set-multicast-address-range HTTP/1.1" 200 None
-logger_main - INFO -   SET: \u2705
+logger_main - INFO -   SET: [0.08s] \u2705
+logger_main - INFO -   Executing SHOW verification...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/show-multicast-address-range HTTP/1.1" 200 None
-logger_main - INFO -   SHOW: \u2705
+logger_main - INFO -   SHOW: [0.08s] \u2705
+logger_main - INFO -   Executing DELETE cleanup...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/delete-multicast-address-range HTTP/1.1" 200 None
-logger_main - INFO -   DELETE: \u2705
-logger_main - INFO - Finished lifecycle for QA_MULTICAST-ADDRESS-RANGE_5_442 (add took 2 attempt(s))
-logger_main - INFO - Testing Variant 7/7: QA_MULTICAST-ADDRESS-RANGE_6_995
-logger_main - INFO -   Attempt 1/5: keys=['ip-address', 'name', 'set-if-exists', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors', 'ipv6-address-last', 'ipv6-address-first']
+logger_main - INFO -   DELETE: [0.08s] \u2705
+logger_main - INFO - Finished lifecycle for QA_MULTICAST-ADDRESS-RANGE_5_494 (Completed in 0.38s)
+logger_main - INFO - Testing Variant 7/7: QA_MULTICAST-ADDRESS-RANGE_6_977
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-multicast-address-range HTTP/1.1" 200 None
-logger_main - INFO -   Attempt 1: ADD succeeded \u2705
+logger_main - INFO -   ADD: [0.08s] \u2705
+logger_main - INFO -   Executing SET optimization...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/set-multicast-address-range HTTP/1.1" 200 None
-logger_main - INFO -   SET: \u2705
+logger_main - INFO -   SET: [0.08s] \u2705
+logger_main - INFO -   Executing SHOW verification...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/show-multicast-address-range HTTP/1.1" 200 None
-logger_main - INFO -   SHOW: \u2705
+logger_main - INFO -   SHOW: [0.07s] \u2705
+logger_main - INFO -   Executing DELETE cleanup...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/delete-multicast-address-range HTTP/1.1" 200 None
-logger_main - INFO -   DELETE: \u2705
-logger_main - INFO - Finished lifecycle for QA_MULTICAST-ADDRESS-RANGE_6_995 (add took 1 attempt(s))
+logger_main - INFO -   DELETE: [0.11s] \u2705
+logger_main - INFO - Finished lifecycle for QA_MULTICAST-ADDRESS-RANGE_6_977 (Completed in 0.35s)
 logger_main - INFO - --- Starting exhaustive QA for object type: group-with-exclusion ---
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-group HTTP/1.1" 200 None
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-group HTTP/1.1" 200 None
-logger_main - INFO -   Created helper groups: include='QA_HELPER_INCLUDE_6038', except='QA_HELPER_EXCEPT_2980'
+logger_main - INFO -   Created helper groups: include='QA_HELPER_INCLUDE_7777', except='QA_HELPER_EXCEPT_3294'
 logger_main - INFO - Generated 1 'Full' test variants for group-with-exclusion.
-logger_main - INFO - Testing Variant 1/1: QA_GROUP-WITH-EXCLUSION_0_519
-logger_main - INFO -   Injected include='QA_HELPER_INCLUDE_6038', except='QA_HELPER_EXCEPT_2980'
-logger_main - INFO -   Attempt 1/5: keys=['name', 'except', 'include', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors']
+logger_main - INFO - Testing Variant 1/1: QA_GROUP-WITH-EXCLUSION_0_375
+logger_main - INFO -   Injected include='QA_HELPER_INCLUDE_7777', except='QA_HELPER_EXCEPT_3294'
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-group-with-exclusion HTTP/1.1" 200 None
-logger_main - INFO -   Attempt 1: ADD succeeded \u2705
+logger_main - INFO -   ADD: [0.30s] \u2705
+logger_main - INFO -   Executing SET optimization...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/set-group-with-exclusion HTTP/1.1" 200 None
-logger_main - INFO -   SET: \u2705
+logger_main - INFO -   SET: [0.10s] \u2705
+logger_main - INFO -   Executing SHOW verification...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/show-group-with-exclusion HTTP/1.1" 200 None
-logger_main - INFO -   SHOW: \u2705
+logger_main - INFO -   SHOW: [0.16s] \u2705
+logger_main - INFO -   Executing DELETE cleanup...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/delete-group-with-exclusion HTTP/1.1" 200 None
-logger_main - INFO -   DELETE: \u2705
-logger_main - INFO - Finished lifecycle for QA_GROUP-WITH-EXCLUSION_0_519 (add took 1 attempt(s))
+logger_main - INFO -   DELETE: [0.15s] \u2705
+logger_main - INFO - Finished lifecycle for QA_GROUP-WITH-EXCLUSION_0_375 (Completed in 0.71s)
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/delete-group HTTP/1.1" 200 None
-logger_main - INFO -   Cleaned up helper group 'QA_HELPER_INCLUDE_6038'
+logger_main - INFO -   Cleaned up helper group 'QA_HELPER_INCLUDE_7777'
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/delete-group HTTP/1.1" 200 None
-logger_main - INFO -   Cleaned up helper group 'QA_HELPER_EXCEPT_2980'
+logger_main - INFO -   Cleaned up helper group 'QA_HELPER_EXCEPT_3294'
 logger_main - INFO - --- Starting exhaustive QA for object type: dns-domain ---
 logger_main - INFO - Generated 1 'Full' test variants for dns-domain.
-logger_main - INFO - Testing Variant 1/1: .qa-domain-0-502.example.com
-logger_main - INFO -   Attempt 1/5: keys=['name', 'is-sub-domain', 'color', 'comments', 'details-level', 'tags', 'ignore-warnings', 'ignore-errors']
+logger_main - INFO - Testing Variant 1/1: .qa-domain-0-353.example.com
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-dns-domain HTTP/1.1" 200 None
-logger_main - INFO -   Attempt 1: ADD succeeded \u2705
+logger_main - INFO -   ADD: [0.07s] \u2705
+logger_main - INFO -   Executing SET optimization...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/set-dns-domain HTTP/1.1" 200 None
-logger_main - INFO -   SET: \u2705
+logger_main - INFO -   SET: [0.09s] \u2705
+logger_main - INFO -   Executing SHOW verification...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/show-dns-domain HTTP/1.1" 200 None
-logger_main - INFO -   SHOW: \u2705
+logger_main - INFO -   SHOW: [0.07s] \u2705
+logger_main - INFO -   Executing DELETE cleanup...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/delete-dns-domain HTTP/1.1" 200 None
-logger_main - INFO -   DELETE: \u2705
-logger_main - INFO - Finished lifecycle for .qa-domain-0-502.example.com (add took 1 attempt(s))
+logger_main - INFO -   DELETE: [0.09s] \u2705
+logger_main - INFO - Finished lifecycle for .qa-domain-0-353.example.com (Completed in 0.32s)
 logger_main - INFO - --- Starting exhaustive QA for object type: wildcard ---
 logger_main - INFO - Generated 1 'Full' test variants for wildcard.
-logger_main - INFO - Testing Variant 1/1: QA_WILDCARD_0_338
-logger_main - INFO -   Attempt 1/5: keys=['ipv4-address', 'ipv4-mask-wildcard', 'ipv6-address', 'ipv6-mask-wildcard', 'name', 'color', 'comments', 'details-level', 'groups', 'tags', 'ignore-warnings', 'ignore-errors']
+logger_main - INFO - Testing Variant 1/1: QA_WILDCARD_0_949
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/add-wildcard HTTP/1.1" 200 None
-logger_main - INFO -   Attempt 1: ADD succeeded \u2705
+logger_main - INFO -   ADD: [0.09s] \u2705
+logger_main - INFO -   Executing SET optimization...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/set-wildcard HTTP/1.1" 200 None
-logger_main - INFO -   SET: \u2705
+logger_main - INFO -   SET: [0.11s] \u2705
+logger_main - INFO -   Executing SHOW verification...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/show-wildcard HTTP/1.1" 200 None
-logger_main - INFO -   SHOW: \u2705
+logger_main - INFO -   SHOW: [0.07s] \u2705
+logger_main - INFO -   Executing DELETE cleanup...
 urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): 203.0.113.234:443
 urllib3.connectionpool - DEBUG - https://203.0.113.234:443 "POST /web_api/delete-wildcard HTTP/1.1" 200 None
-logger_main - INFO -   DELETE: \u2705
-logger_main - INFO - Finished lifecycle for QA_WILDCARD_0_338 (add took 1 attempt(s))
+logger_main - INFO -   DELETE: [0.09s] \u2705
+logger_main - INFO - Finished lifecycle for QA_WILDCARD_0_949 (Completed in 0.36s)
 logger_main - INFO - QA Report exported to reports/QA_RAW_DATA.json
 logger_main - INFO - Markdown QA Report exported to reports/QA_SUMMARY_REPORT.md
 logger_main - INFO - QA Run complete. Reports saved to reports/QA_RAW_DATA.json and reports/QA_SUMMARY_REPORT.md

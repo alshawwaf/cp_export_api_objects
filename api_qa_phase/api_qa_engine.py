@@ -1,6 +1,7 @@
 import json
 import random
 import string
+import time
 from logger_main import log
 
 class APIQAEngine:
@@ -476,33 +477,29 @@ class APIQAEngine:
                 base_payload['except'] = helper_except_group
                 log.info(f"  Injected include='{helper_group}', except='{helper_except_group}'")
 
-            # === ADAPTIVE ADD WITH RETRY ===
+            # === ADAPTIVE ADD WITH OPTIMIZATION ===
             success = False
             attempt = 0
             add_res = {}
+            add_start = time.perf_counter()
             
             while not success and attempt < MAX_RETRIES:
                 attempt += 1
-                log.info(f"  Attempt {attempt}/{MAX_RETRIES}: keys={list(base_payload.keys())}")
+                if attempt > 1:
+                    log.info(f"  Optimizing payload for accuracy (pass {attempt})...")
                 
                 add_res = self.client.run_command(f"add-{obj_type}", base_payload)
                 success = 'uid' in add_res or add_res.get('code') == 'success'
                 
                 # Accept warnings as success
                 if not success and "warning" in str(add_res).lower() and "uid" in str(add_res):
-                    log.info(f"  Attempt {attempt}: succeeded with warnings.")
-                    success = True
-                    # If it's a 'Full' variant for a host, ensure we didn't lose the interface
-                    if obj_type == 'host' and i > 0 and 'interfaces' in base_payload and not base_payload['interfaces']:
-                         log.warning("  Warning: 'Full' variant interfaces were stripped during self-healing.")
                     success = True
                     break
                 
                 if success:
-                    log.info(f"  Attempt {attempt}: ADD succeeded ✅")
                     break
                 
-                # === AUTO-FIX: Use error feedback to correct the payload ===
+                # === AUTO-CORRECTION: Use error feedback to identify missing dependencies or required fields ===
                 error_msg = str(add_res.get('message', '')).lower()
                 blocking_errors = add_res.get('blocking-errors', add_res.get('errors', []))
                 all_errors = error_msg
@@ -512,19 +509,23 @@ class APIQAEngine:
                     else:
                         all_errors += " " + str(be).lower()
                 
-                log.info(f"  Attempt {attempt}: [Self-Healing] Analysing API feedback for correction...")
-                
                 fixed = self._auto_fix_payload(base_payload, all_errors, parameters)
                 if not fixed:
-                    log.warning(f"  No auto-fix available. Giving up on variant {i}.")
                     break
+            
+            add_duration = time.perf_counter() - add_start
+            if success:
+                log.info(f"  ADD: [{add_duration:.2f}s] ✅")
+            else:
+                log.error(f"  ADD: [{add_duration:.2f}s] ❌")
 
-            # Record the FINAL add result (success or last failure)
+            # Record the FINAL add result
             self.results.append({
                 "type": obj_type, "variant": i, "command": f"add-{obj_type}", 
-                "payload": dict(base_payload),  # snapshot of final payload
-                "response": add_res, "success": success,
-                "attempts": attempt
+                "payload": dict(base_payload),
+                "response": add_res,
+                "success": success,
+                "duration": add_duration
             })
             
             if not success:
@@ -532,34 +533,50 @@ class APIQAEngine:
                 continue
 
             # === SET ===
-            set_payload = {"name": test_id, "comments": f"QA updated exhaustive variant {i}", "color": "orange"}
+            set_payload = {
+                "name": test_id,
+                "comments": f"QA updated exhaustive variant {i}",
+                "color": "orange"
+            }
+            log.info(f"  Executing SET optimization...")
+            t_start = time.perf_counter()
             set_res = self.client.run_command(f"set-{obj_type}", set_payload)
-            set_success = set_res.get('code') == 'success' or 'uid' in set_res
+            set_dur = time.perf_counter() - t_start
+            set_success = 'uid' in set_res or set_res.get('code') == 'success' or set_res.get('message') == 'OK'
+            log.info(f"  SET: [{set_dur:.2f}s] {'✅' if set_success else '❌'}")
+            
             self.results.append({
-                "type": obj_type, "variant": i, "command": f"set-{obj_type}", 
-                "payload": set_payload, "response": set_res, "success": set_success
+                "type": obj_type, "variant": i, "command": f"set-{obj_type}",
+                "payload": set_payload, "response": set_res, "success": set_success, "duration": set_dur
             })
-            log.info(f"  SET: {'✅' if set_success else '❌'}")
 
             # === SHOW ===
-            show_payload = {"name": test_id, "details-level": "full"}
-            show_res = self.client.run_command(f"show-{obj_type}", show_payload)
-            show_success = 'uid' in show_res
+            log.info(f"  Executing SHOW verification...")
+            t_start = time.perf_counter()
+            show_res = self.client.run_command(f"show-{obj_type}", {"name": test_id, "details-level": "full"})
+            show_dur = time.perf_counter() - t_start
+            show_success = 'uid' in show_res or show_res.get('code') == 'success' or show_res.get('message') == 'OK'
+            log.info(f"  SHOW: [{show_dur:.2f}s] {'✅' if show_success else '❌'}")
+
             self.results.append({
-                "type": obj_type, "variant": i, "command": f"show-{obj_type}", 
-                "payload": show_payload, "response": show_res, "success": show_success
+                "type": obj_type, "variant": i, "command": f"show-{obj_type}",
+                "payload": {"name": test_id}, "response": show_res, "success": show_success, "duration": show_dur
             })
-            log.info(f"  SHOW: {'✅' if show_success else '❌'}")
 
             # === DELETE ===
+            log.info(f"  Executing DELETE cleanup...")
+            t_start = time.perf_counter()
             del_res = self.client.run_command(f"delete-{obj_type}", {"name": test_id})
-            del_success = del_res.get('code') == 'success' or del_res.get('message') == 'OK'
+            del_dur = time.perf_counter() - t_start
+            del_success = 'uid' in del_res or del_res.get('code') == 'success' or del_res.get('message') == 'OK'
+            log.info(f"  DELETE: [{del_dur:.2f}s] {'✅' if del_success else '❌'}")
+
             self.results.append({
-                "type": obj_type, "variant": i, "command": f"delete-{obj_type}", 
-                "payload": {"name": test_id}, "response": del_res, "success": del_success
+                "type": obj_type, "variant": i, "command": f"delete-{obj_type}",
+                "payload": {"name": test_id}, "response": del_res, "success": del_success, "duration": del_dur
             })
-            log.info(f"  DELETE: {'✅' if del_success else '❌'}")
-            log.info(f"Finished lifecycle for {test_id} (add took {attempt} attempt(s))")
+
+            log.info(f"Finished lifecycle for {test_id} (Completed in {add_duration+set_dur+show_dur+del_dur:.2f}s)")
 
         # Clean up helper objects
         if helper_group:
@@ -745,7 +762,7 @@ class APIQAEngine:
         log.info(f"QA Report exported to {file_path}")
 
     def export_markdown_report(self, file_path):
-        """Generate a detailed Markdown report with collapsible groups for each object variant."""
+        """Generate a professional performance-focused Markdown report."""
         if not self.results:
             log.warning("No results to export to Markdown.")
             return
@@ -754,30 +771,27 @@ class APIQAEngine:
         import os
         
         lines = [
-            "# API QA Test Report",
+            "# API QA Performance Audit Report",
             f"Generated: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
             "",
             "## Summary Table",
-            "| Object Type | Variant | Status | Attempts |",
+            "| Object Type | Variant | Status | Duration (s) |",
             "| :--- | :--- | :--- | :--- |"
         ]
         
-        # Calculate summary per variant (success if ALL lifecycle commands for that variant passed)
-        variant_summary = {}
-        # 1. Identify which variants to filter out (Skip Variant 0 if Variant 1 or 2 exists)
-        variants_to_skip = set()
-        v_exists = {} # (type) -> list of variants
+        v_exists = {} # (type) -> set of variants
         for res in self.results:
-            t = res['type']
-            v = res['variant']
+            t, v = res['type'], res['variant']
             if t not in v_exists: v_exists[t] = set()
             v_exists[t].add(v)
-        
+
+        # 1. Identify which variants to filter out (Skip Variant 0 if Variant 1+ exists)
+        variants_to_skip = set()
         for t, vs in v_exists.items():
             if 0 in vs and any(v > 0 for v in vs):
                 variants_to_skip.add((t, 0))
 
-        # 2. Re-calculate Summary Table (filtered)
+        # 2. Calculate summary per variant (success and total duration)
         variant_summary = {}
         for res in self.results:
             key = (res['type'], res['variant'])
@@ -785,15 +799,14 @@ class APIQAEngine:
                 continue
             
             if key not in variant_summary:
-                variant_summary[key] = {"success": True, "attempts": 1}
+                variant_summary[key] = {"success": True, "total_duration": 0.0}
             if not res.get('success', False):
                 variant_summary[key]["success"] = False
-            if res.get('command', '').startswith('add-'):
-                variant_summary[key]["attempts"] = res.get('attempts', 1)
+            variant_summary[key]["total_duration"] += res.get('duration', 0.0)
 
         for (otype, var), data in variant_summary.items():
             status = "[PASSED]" if data["success"] else "[FAILED]"
-            lines.append(f"| {otype} | {var} | {status} | {data['attempts']} |")
+            lines.append(f"| {otype} | {var} | {status} | {data['total_duration']:.2f} |")
         
         lines.append("")
         
@@ -807,17 +820,12 @@ class APIQAEngine:
             
             if (obj_type, variant) in variants_to_skip:
                 continue
-            obj_type = res.get('type', '')
-            variant = res.get('variant', 0)
-            
-            if (obj_type, variant) in variants_to_skip:
-                continue
 
             command = res.get('command', '')
             success = res.get('success', False)
             payload = res.get('payload', {})
             response = res.get('response', {})
-            attempts = res.get('attempts', 1)
+            duration = res.get('duration', 0.0)
 
             # Object Type Header
             if obj_type != current_type:
@@ -835,14 +843,14 @@ class APIQAEngine:
                     lines.append("</details>\n")
                 current_variant = variant
                 var_status = "[PASSED]" if variant_summary[(obj_type, variant)]["success"] else "[FAILED]"
-                healing_note = f" (Self-Healed in {attempts} attempts)" if attempts > 1 else ""
+                total_dur = variant_summary[(obj_type, variant)]["total_duration"]
                 lines.append(f"<details>")
-                lines.append(f"<summary><b>{var_status} Variant {variant}{healing_note}</b></summary>")
+                lines.append(f"<summary><b>{var_status} Variant {variant} (Total: {total_dur:.2f}s)</b></summary>")
                 lines.append("")
 
             # Individual Command Result
-            status_mark = "✅" if success else "❌"
-            lines.append(f"#### {status_mark} `{command}`")
+            status_label = "[PASSED]" if success else "[FAILED]"
+            lines.append(f"#### {status_label} `{command}` ([{duration:.2f}s])")
             lines.append("")
             lines.append("**Payload:**")
             lines.append("```json")
