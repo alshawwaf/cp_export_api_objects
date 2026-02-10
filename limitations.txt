@@ -1,23 +1,23 @@
 # Check Point API Exporter - Current Limitations
 
-This list reflects the current state of the exporter. Many previous limitations (like Cleanup rule export and TCP service fields) have been addressed in recent cycles.
+This list reflects the current state of the exporter. Many previous limitations (like Cleanup rule export and TCP service fields) have been addressed in recent cycles for R80.40, R81.x, and R82 servers.
 
-## 🚀 Recently Resolved (Cycle 1-5 Improvements)
-- **Cleanup Rule Export**: Now fully supported. The exporter intelligently uses `set` if the layer already has a default rule enabled, and `add` otherwise. It also enforces `track Log` by default.
-- **TCP Service Fields**: Fields like `delayed-sync-value`, `enable-tcp-resource`, and `use-delayed-sync` are now fully supported via dynamic API spec discovery.
-- **VPN Parameters**: `shared-secret` nesting is now correctly handled for CLI imports.
+## Recently Resolved (Cycle 1-5 Improvements)
+- **Cleanup Rule Export**: Now fully supported across all versions. The exporter intelligently uses `set` if the layer already has a default rule enabled, and `add` otherwise. It also enforces `track Log` by default.
+- **TCP Service Fields**: Fields like `delayed-sync-value`, `enable-tcp-resource`, and `use-delayed-sync` (API 1.x and 2.x) are now fully supported via dynamic API spec discovery.
+- **VPN Parameters**: `shared-secret` nesting is now correctly handled for CLI imports, consistent with management API v1.6 and above.
 - **Topology Filtering**: Refined to target auto-generated `Net_X.X.X.X` objects while preserving user-created ones.
 
-## ⚠️ Current Object Constraints
-- **Application Control**: `application-site` may miss the `primary-category` field depending on the source API version's spec visibility.
-- **Whitelisted Fields**: Certain complex objects (`access-role`, `simple-gateway`, `vpn-community-*`) are exported with a curated list of fields to ensure import stability on diverse target environments.
-- **Ansible Mappings**: The API uses `remote-access-client` (singular), but Ansible expects `remote-access-clients` (plural).
+## Current Object Constraints
+- **Application Control**: `application-site` may miss the `primary-category` field depending on the source API version's spec visibility (notably in R80.x/API 1.6).
+- **Whitelisted Fields**: Certain complex objects (`access-role`, `simple-gateway`, `vpn-community-*`) are exported with a curated list of fields to ensure import stability across different API versions (R80.x to R82).
+- **Ansible Mappings**: The API uses `remote-access-client` (singular), but Ansible modules for R81.x still expect `remote-access-clients` (plural).
 
-## 🔒 Access Rule Limitations
+## Access Rule Limitations
 - **Advanced Parameters**: `vpn` and `content` (Content Awareness) settings are currently not exported.
 - **Rule Names**: Having a rule named "Management" can still cause issues with the `cp_mgmt_access_rule` Ansible module.
-- **Updatable Objects**: Rules using objects like "Office365 Services" require the target Management server to have internet access and an updated Updatable Objects database for the import to succeed.
+- **Updatable Objects**: Rules using objects like "Office365 Services" require the target Management server (R80.40+) to have internet access and an updated Updatable Objects database for the import to succeed.
 
-## 💡 Best Practices
+## Best Practices
 - **Parallel Import**: If importing via Ansible, use a loop to import tasks in sequence for better dependency management.
-- **CLI Import**: For largest policies, the generated `import_mgmt_cli.txt` is the most robust method as it bypasses Ansible-specific module overhead.
+- **CLI Import**: For largest policies (especially on R82/API 2.x), the generated `import_mgmt_cli.txt` is the most robust method as it bypasses Ansible-specific module overhead.
