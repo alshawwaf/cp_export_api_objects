@@ -1,0 +1,4555 @@
+[
+  {
+    "type": "host",
+    "variant": 0,
+    "command": "add-host",
+    "payload": {
+      "interfaces": [],
+      "nat-settings": {
+        "auto-rule": "true",
+        "method": "hide",
+        "hide-behind": "gateway"
+      },
+      "host-servers": {
+        "dns-server": false,
+        "mail-server": false,
+        "web-server": true,
+        "web-server-config": {
+          "additional-ports": [],
+          "application-engines": [],
+          "listen-standard-port": false,
+          "operating-system": "sparc solaris"
+        }
+      },
+      "name": "QA_HOST_0_457",
+      "set-if-exists": true,
+      "color": "crete blue",
+      "comments": "QA Automated Test Object",
+      "details-level": "full",
+      "groups": [],
+      "tags": [],
+      "ignore-warnings": true,
+      "ignore-errors": true,
+      "ip-address": "10.100.1.95"
+    },
+    "response": {
+      "uid": "a81fa2ed-feec-424a-9b3b-2516dac5263e",
+      "name": "QA_HOST_0_457",
+      "type": "host",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address": "10.100.1.95",
+      "host-servers": {
+        "web-server": true,
+        "mail-server": false,
+        "dns-server": false,
+        "web-server-config": {
+          "application-engines": [],
+          "listen-standard-port": false,
+          "operating-system": "sparc solaris",
+          "protected-by": "97aeb368-9aea-11d5-bd16-0090272ccb30"
+        }
+      },
+      "interfaces": [],
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA Automated Test Object",
+      "color": "crete blue",
+      "icon": "Objects/host",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689172608,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689172608,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true,
+    "attempts": 2
+  },
+  {
+    "type": "host",
+    "variant": 0,
+    "command": "set-host",
+    "payload": {
+      "name": "QA_HOST_0_457",
+      "comments": "QA updated exhaustive variant 0",
+      "color": "orange"
+    },
+    "response": {
+      "uid": "a81fa2ed-feec-424a-9b3b-2516dac5263e",
+      "name": "QA_HOST_0_457",
+      "type": "host",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address": "10.100.1.95",
+      "host-servers": {
+        "web-server": true,
+        "mail-server": false,
+        "dns-server": false,
+        "web-server-config": {
+          "application-engines": [],
+          "listen-standard-port": false,
+          "additional-ports": [],
+          "operating-system": "sparc solaris",
+          "protected-by": "97aeb368-9aea-11d5-bd16-0090272ccb30"
+        }
+      },
+      "interfaces": [],
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA updated exhaustive variant 0",
+      "color": "orange",
+      "icon": "Objects/host",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689173084,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689172608,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true
+  },
+  {
+    "type": "host",
+    "variant": 0,
+    "command": "show-host",
+    "payload": {
+      "name": "QA_HOST_0_457",
+      "details-level": "full"
+    },
+    "response": {
+      "uid": "a81fa2ed-feec-424a-9b3b-2516dac5263e",
+      "name": "QA_HOST_0_457",
+      "type": "host",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address": "10.100.1.95",
+      "host-servers": {
+        "web-server": true,
+        "mail-server": false,
+        "dns-server": false,
+        "web-server-config": {
+          "application-engines": [],
+          "listen-standard-port": false,
+          "additional-ports": [],
+          "operating-system": "sparc solaris",
+          "protected-by": "97aeb368-9aea-11d5-bd16-0090272ccb30"
+        }
+      },
+      "interfaces": [],
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA updated exhaustive variant 0",
+      "color": "orange",
+      "icon": "Objects/host",
+      "tags": [],
+      "meta-info": {
+        "lock": "locked by current session",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689173084,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689172608,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": false,
+      "available-actions": {
+        "edit": "true",
+        "delete": "true",
+        "clone": "true"
+      }
+    },
+    "success": true
+  },
+  {
+    "type": "host",
+    "variant": 0,
+    "command": "delete-host",
+    "payload": {
+      "name": "QA_HOST_0_457"
+    },
+    "response": {
+      "message": "OK"
+    },
+    "success": true
+  },
+  {
+    "type": "host",
+    "variant": 1,
+    "command": "add-host",
+    "payload": {
+      "interfaces": [
+        {
+          "name": "QA_2569",
+          "subnet": "10.100.0.0",
+          "mask-length": 24,
+          "color": "firebrick",
+          "comments": "QA Automated Test Object",
+          "ignore-warnings": true,
+          "ignore-errors": true
+        }
+      ],
+      "nat-settings": {
+        "auto-rule": "true",
+        "method": "hide",
+        "hide-behind": "gateway"
+      },
+      "host-servers": {
+        "dns-server": false,
+        "mail-server": false,
+        "web-server": true,
+        "web-server-config": {
+          "additional-ports": [],
+          "application-engines": [],
+          "listen-standard-port": false,
+          "operating-system": "sparc solaris"
+        }
+      },
+      "name": "QA_HOST_1_637",
+      "set-if-exists": true,
+      "color": "crete blue",
+      "comments": "QA Automated Test Object",
+      "details-level": "full",
+      "groups": [],
+      "tags": [],
+      "ignore-warnings": true,
+      "ignore-errors": true,
+      "ipv4-address": "10.100.1.95"
+    },
+    "response": {
+      "uid": "4745c029-a1b5-42f0-b62b-0b28f6d7f2f0",
+      "name": "QA_HOST_1_637",
+      "type": "host",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address": "10.100.1.95",
+      "host-servers": {
+        "web-server": true,
+        "mail-server": false,
+        "dns-server": false,
+        "web-server-config": {
+          "application-engines": [],
+          "listen-standard-port": false,
+          "operating-system": "sparc solaris",
+          "protected-by": "97aeb368-9aea-11d5-bd16-0090272ccb30"
+        }
+      },
+      "interfaces": [
+        {
+          "uid": "083790c7-d212-4367-8de2-181d1df2eb12",
+          "name": "QA_2569",
+          "type": "CpmiInterface",
+          "domain": {
+            "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+            "name": "SMC User",
+            "domain-type": "domain"
+          },
+          "subnet4": "10.100.0.0",
+          "mask-length4": 24,
+          "subnet-mask": "255.255.255.0",
+          "comments": "QA Automated Test Object",
+          "color": "firebrick",
+          "icon": "Unknown",
+          "tags": []
+        }
+      ],
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA Automated Test Object",
+      "color": "crete blue",
+      "icon": "Objects/host",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689173876,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689173876,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true,
+    "attempts": 1
+  },
+  {
+    "type": "host",
+    "variant": 1,
+    "command": "set-host",
+    "payload": {
+      "name": "QA_HOST_1_637",
+      "comments": "QA updated exhaustive variant 1",
+      "color": "orange"
+    },
+    "response": {
+      "uid": "4745c029-a1b5-42f0-b62b-0b28f6d7f2f0",
+      "name": "QA_HOST_1_637",
+      "type": "host",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address": "10.100.1.95",
+      "host-servers": {
+        "web-server": true,
+        "mail-server": false,
+        "dns-server": false,
+        "web-server-config": {
+          "application-engines": [],
+          "listen-standard-port": false,
+          "additional-ports": [],
+          "operating-system": "sparc solaris",
+          "protected-by": "97aeb368-9aea-11d5-bd16-0090272ccb30"
+        }
+      },
+      "interfaces": [
+        {
+          "uid": "083790c7-d212-4367-8de2-181d1df2eb12",
+          "name": "QA_2569",
+          "type": "CpmiInterface",
+          "domain": {
+            "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+            "name": "SMC User",
+            "domain-type": "domain"
+          },
+          "subnet4": "10.100.0.0",
+          "mask-length4": 24,
+          "subnet-mask": "255.255.255.0",
+          "comments": "QA Automated Test Object",
+          "color": "firebrick",
+          "icon": "Unknown",
+          "tags": []
+        }
+      ],
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA updated exhaustive variant 1",
+      "color": "orange",
+      "icon": "Objects/host",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689174215,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689173876,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true
+  },
+  {
+    "type": "host",
+    "variant": 1,
+    "command": "show-host",
+    "payload": {
+      "name": "QA_HOST_1_637",
+      "details-level": "full"
+    },
+    "response": {
+      "uid": "4745c029-a1b5-42f0-b62b-0b28f6d7f2f0",
+      "name": "QA_HOST_1_637",
+      "type": "host",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address": "10.100.1.95",
+      "host-servers": {
+        "web-server": true,
+        "mail-server": false,
+        "dns-server": false,
+        "web-server-config": {
+          "application-engines": [],
+          "listen-standard-port": false,
+          "additional-ports": [],
+          "operating-system": "sparc solaris",
+          "protected-by": "97aeb368-9aea-11d5-bd16-0090272ccb30"
+        }
+      },
+      "interfaces": [
+        {
+          "uid": "083790c7-d212-4367-8de2-181d1df2eb12",
+          "name": "QA_2569",
+          "type": "CpmiInterface",
+          "domain": {
+            "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+            "name": "SMC User",
+            "domain-type": "domain"
+          },
+          "subnet4": "10.100.0.0",
+          "mask-length4": 24,
+          "subnet-mask": "255.255.255.0",
+          "comments": "QA Automated Test Object",
+          "color": "firebrick",
+          "icon": "Unknown",
+          "tags": []
+        }
+      ],
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA updated exhaustive variant 1",
+      "color": "orange",
+      "icon": "Objects/host",
+      "tags": [],
+      "meta-info": {
+        "lock": "locked by current session",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689174215,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689173876,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": false,
+      "available-actions": {
+        "edit": "true",
+        "delete": "true",
+        "clone": "true"
+      }
+    },
+    "success": true
+  },
+  {
+    "type": "host",
+    "variant": 1,
+    "command": "delete-host",
+    "payload": {
+      "name": "QA_HOST_1_637"
+    },
+    "response": {
+      "message": "OK"
+    },
+    "success": true
+  },
+  {
+    "type": "host",
+    "variant": 2,
+    "command": "add-host",
+    "payload": {
+      "interfaces": [
+        {
+          "name": "QA_2569",
+          "subnet": "10.100.0.0",
+          "mask-length": 24,
+          "color": "firebrick",
+          "comments": "QA Automated Test Object",
+          "ignore-warnings": true,
+          "ignore-errors": true
+        }
+      ],
+      "nat-settings": {
+        "auto-rule": "true",
+        "method": "hide",
+        "hide-behind": "gateway"
+      },
+      "host-servers": {
+        "dns-server": false,
+        "mail-server": false,
+        "web-server": true,
+        "web-server-config": {
+          "additional-ports": [],
+          "application-engines": [],
+          "listen-standard-port": false,
+          "operating-system": "sparc solaris"
+        }
+      },
+      "name": "QA_HOST_2_384",
+      "set-if-exists": true,
+      "color": "crete blue",
+      "comments": "QA Automated Test Object",
+      "details-level": "full",
+      "groups": [],
+      "tags": [],
+      "ignore-warnings": true,
+      "ignore-errors": true,
+      "ipv6-address": "2001:db8:85a3::30a5"
+    },
+    "response": {
+      "uid": "ff81b50e-8b4e-4371-8819-4b2a2429df84",
+      "name": "QA_HOST_2_384",
+      "type": "host",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv6-address": "2001:db8:85a3::30a5",
+      "host-servers": {
+        "web-server": true,
+        "mail-server": false,
+        "dns-server": false,
+        "web-server-config": {
+          "application-engines": [],
+          "listen-standard-port": false,
+          "operating-system": "sparc solaris",
+          "protected-by": "97aeb368-9aea-11d5-bd16-0090272ccb30"
+        }
+      },
+      "interfaces": [
+        {
+          "uid": "efcb21a5-e31e-4934-a3e3-2ae228fdb0bc",
+          "name": "QA_2569",
+          "type": "CpmiInterface",
+          "domain": {
+            "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+            "name": "SMC User",
+            "domain-type": "domain"
+          },
+          "subnet4": "10.100.0.0",
+          "mask-length4": 24,
+          "subnet-mask": "255.255.255.0",
+          "comments": "QA Automated Test Object",
+          "color": "firebrick",
+          "icon": "Unknown",
+          "tags": []
+        }
+      ],
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA Automated Test Object",
+      "color": "crete blue",
+      "icon": "Objects/host",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689174803,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689174803,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true,
+    "attempts": 1
+  },
+  {
+    "type": "host",
+    "variant": 2,
+    "command": "set-host",
+    "payload": {
+      "name": "QA_HOST_2_384",
+      "comments": "QA updated exhaustive variant 2",
+      "color": "orange"
+    },
+    "response": {
+      "uid": "ff81b50e-8b4e-4371-8819-4b2a2429df84",
+      "name": "QA_HOST_2_384",
+      "type": "host",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv6-address": "2001:db8:85a3::30a5",
+      "host-servers": {
+        "web-server": true,
+        "mail-server": false,
+        "dns-server": false,
+        "web-server-config": {
+          "application-engines": [],
+          "listen-standard-port": false,
+          "additional-ports": [],
+          "operating-system": "sparc solaris",
+          "protected-by": "97aeb368-9aea-11d5-bd16-0090272ccb30"
+        }
+      },
+      "interfaces": [
+        {
+          "uid": "efcb21a5-e31e-4934-a3e3-2ae228fdb0bc",
+          "name": "QA_2569",
+          "type": "CpmiInterface",
+          "domain": {
+            "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+            "name": "SMC User",
+            "domain-type": "domain"
+          },
+          "subnet4": "10.100.0.0",
+          "mask-length4": 24,
+          "subnet-mask": "255.255.255.0",
+          "comments": "QA Automated Test Object",
+          "color": "firebrick",
+          "icon": "Unknown",
+          "tags": []
+        }
+      ],
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA updated exhaustive variant 2",
+      "color": "orange",
+      "icon": "Objects/host",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689175155,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689174803,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true
+  },
+  {
+    "type": "host",
+    "variant": 2,
+    "command": "show-host",
+    "payload": {
+      "name": "QA_HOST_2_384",
+      "details-level": "full"
+    },
+    "response": {
+      "uid": "ff81b50e-8b4e-4371-8819-4b2a2429df84",
+      "name": "QA_HOST_2_384",
+      "type": "host",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv6-address": "2001:db8:85a3::30a5",
+      "host-servers": {
+        "web-server": true,
+        "mail-server": false,
+        "dns-server": false,
+        "web-server-config": {
+          "application-engines": [],
+          "listen-standard-port": false,
+          "additional-ports": [],
+          "operating-system": "sparc solaris",
+          "protected-by": "97aeb368-9aea-11d5-bd16-0090272ccb30"
+        }
+      },
+      "interfaces": [
+        {
+          "uid": "efcb21a5-e31e-4934-a3e3-2ae228fdb0bc",
+          "name": "QA_2569",
+          "type": "CpmiInterface",
+          "domain": {
+            "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+            "name": "SMC User",
+            "domain-type": "domain"
+          },
+          "subnet4": "10.100.0.0",
+          "mask-length4": 24,
+          "subnet-mask": "255.255.255.0",
+          "comments": "QA Automated Test Object",
+          "color": "firebrick",
+          "icon": "Unknown",
+          "tags": []
+        }
+      ],
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA updated exhaustive variant 2",
+      "color": "orange",
+      "icon": "Objects/host",
+      "tags": [],
+      "meta-info": {
+        "lock": "locked by current session",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689175155,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689174803,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": false,
+      "available-actions": {
+        "edit": "true",
+        "delete": "true",
+        "clone": "true"
+      }
+    },
+    "success": true
+  },
+  {
+    "type": "host",
+    "variant": 2,
+    "command": "delete-host",
+    "payload": {
+      "name": "QA_HOST_2_384"
+    },
+    "response": {
+      "message": "OK"
+    },
+    "success": true
+  },
+  {
+    "type": "network",
+    "variant": 0,
+    "command": "add-network",
+    "payload": {
+      "nat-settings": {
+        "auto-rule": "true",
+        "method": "hide",
+        "hide-behind": "gateway"
+      },
+      "broadcast": "allow",
+      "name": "QA_NETWORK_0_688",
+      "set-if-exists": true,
+      "color": "dark gold",
+      "comments": "QA Automated Test Object",
+      "details-level": "uid",
+      "groups": [],
+      "tags": [],
+      "ignore-warnings": true,
+      "ignore-errors": true,
+      "subnet": "10.100.0.0",
+      "mask-length": 24
+    },
+    "response": {
+      "uid": "5d1b4878-dd33-4843-8851-4c4c1cdefdd5",
+      "name": "QA_NETWORK_0_688",
+      "type": "network",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "broadcast": "allow",
+      "subnet4": "10.100.0.0",
+      "mask-length4": 24,
+      "subnet-mask": "255.255.255.0",
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA Automated Test Object",
+      "color": "dark gold",
+      "icon": "NetworkObjects/network",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689175763,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689175763,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true,
+    "attempts": 1
+  },
+  {
+    "type": "network",
+    "variant": 0,
+    "command": "set-network",
+    "payload": {
+      "name": "QA_NETWORK_0_688",
+      "comments": "QA updated exhaustive variant 0",
+      "color": "orange"
+    },
+    "response": {
+      "uid": "5d1b4878-dd33-4843-8851-4c4c1cdefdd5",
+      "name": "QA_NETWORK_0_688",
+      "type": "network",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "broadcast": "allow",
+      "subnet4": "10.100.0.0",
+      "mask-length4": 24,
+      "subnet-mask": "255.255.255.0",
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA updated exhaustive variant 0",
+      "color": "orange",
+      "icon": "NetworkObjects/network",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689176223,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689175763,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true
+  },
+  {
+    "type": "network",
+    "variant": 0,
+    "command": "show-network",
+    "payload": {
+      "name": "QA_NETWORK_0_688",
+      "details-level": "full"
+    },
+    "response": {
+      "uid": "5d1b4878-dd33-4843-8851-4c4c1cdefdd5",
+      "name": "QA_NETWORK_0_688",
+      "type": "network",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "broadcast": "allow",
+      "subnet4": "10.100.0.0",
+      "mask-length4": 24,
+      "subnet-mask": "255.255.255.0",
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA updated exhaustive variant 0",
+      "color": "orange",
+      "icon": "NetworkObjects/network",
+      "tags": [],
+      "meta-info": {
+        "lock": "locked by current session",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689176223,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689175763,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": false,
+      "available-actions": {
+        "edit": "true",
+        "delete": "true",
+        "clone": "true"
+      }
+    },
+    "success": true
+  },
+  {
+    "type": "network",
+    "variant": 0,
+    "command": "delete-network",
+    "payload": {
+      "name": "QA_NETWORK_0_688"
+    },
+    "response": {
+      "message": "OK"
+    },
+    "success": true
+  },
+  {
+    "type": "network",
+    "variant": 1,
+    "command": "add-network",
+    "payload": {
+      "nat-settings": {
+        "auto-rule": "true",
+        "method": "hide",
+        "hide-behind": "gateway"
+      },
+      "broadcast": "allow",
+      "name": "QA_NETWORK_1_721",
+      "set-if-exists": true,
+      "color": "dark gold",
+      "comments": "QA Automated Test Object",
+      "details-level": "uid",
+      "groups": [],
+      "tags": [],
+      "ignore-warnings": true,
+      "ignore-errors": true,
+      "mask-length": 24,
+      "subnet4": "10.100.0.0",
+      "mask-length4": 24
+    },
+    "response": {
+      "uid": "9df2ea3a-9830-46ed-965e-1cf5bc6d31c6",
+      "name": "QA_NETWORK_1_721",
+      "type": "network",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "broadcast": "allow",
+      "subnet4": "10.100.0.0",
+      "mask-length4": 24,
+      "subnet-mask": "255.255.255.0",
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA Automated Test Object",
+      "color": "dark gold",
+      "icon": "NetworkObjects/network",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689177012,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689177012,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true,
+    "attempts": 2
+  },
+  {
+    "type": "network",
+    "variant": 1,
+    "command": "set-network",
+    "payload": {
+      "name": "QA_NETWORK_1_721",
+      "comments": "QA updated exhaustive variant 1",
+      "color": "orange"
+    },
+    "response": {
+      "uid": "9df2ea3a-9830-46ed-965e-1cf5bc6d31c6",
+      "name": "QA_NETWORK_1_721",
+      "type": "network",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "broadcast": "allow",
+      "subnet4": "10.100.0.0",
+      "mask-length4": 24,
+      "subnet-mask": "255.255.255.0",
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA updated exhaustive variant 1",
+      "color": "orange",
+      "icon": "NetworkObjects/network",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689177434,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689177012,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true
+  },
+  {
+    "type": "network",
+    "variant": 1,
+    "command": "show-network",
+    "payload": {
+      "name": "QA_NETWORK_1_721",
+      "details-level": "full"
+    },
+    "response": {
+      "uid": "9df2ea3a-9830-46ed-965e-1cf5bc6d31c6",
+      "name": "QA_NETWORK_1_721",
+      "type": "network",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "broadcast": "allow",
+      "subnet4": "10.100.0.0",
+      "mask-length4": 24,
+      "subnet-mask": "255.255.255.0",
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA updated exhaustive variant 1",
+      "color": "orange",
+      "icon": "NetworkObjects/network",
+      "tags": [],
+      "meta-info": {
+        "lock": "locked by current session",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689177434,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689177012,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": false,
+      "available-actions": {
+        "edit": "true",
+        "delete": "true",
+        "clone": "true"
+      }
+    },
+    "success": true
+  },
+  {
+    "type": "network",
+    "variant": 1,
+    "command": "delete-network",
+    "payload": {
+      "name": "QA_NETWORK_1_721"
+    },
+    "response": {
+      "message": "OK"
+    },
+    "success": true
+  },
+  {
+    "type": "network",
+    "variant": 2,
+    "command": "add-network",
+    "payload": {
+      "nat-settings": {
+        "auto-rule": "true",
+        "method": "hide",
+        "hide-behind": "gateway"
+      },
+      "broadcast": "allow",
+      "name": "QA_NETWORK_2_134",
+      "set-if-exists": true,
+      "color": "dark gold",
+      "comments": "QA Automated Test Object",
+      "details-level": "uid",
+      "groups": [],
+      "tags": [],
+      "ignore-warnings": true,
+      "ignore-errors": true,
+      "mask-length": 24,
+      "subnet6": "2001:db8:85a3::",
+      "mask-length6": 64
+    },
+    "response": {
+      "uid": "2c63f557-b754-47ff-bad6-aaa7a8783d54",
+      "name": "QA_NETWORK_2_134",
+      "type": "network",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "broadcast": "allow",
+      "subnet6": "2001:db8:85a3::",
+      "mask-length6": 64,
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA Automated Test Object",
+      "color": "dark gold",
+      "icon": "NetworkObjects/network",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689178175,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689178175,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true,
+    "attempts": 2
+  },
+  {
+    "type": "network",
+    "variant": 2,
+    "command": "set-network",
+    "payload": {
+      "name": "QA_NETWORK_2_134",
+      "comments": "QA updated exhaustive variant 2",
+      "color": "orange"
+    },
+    "response": {
+      "uid": "2c63f557-b754-47ff-bad6-aaa7a8783d54",
+      "name": "QA_NETWORK_2_134",
+      "type": "network",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "broadcast": "allow",
+      "subnet6": "2001:db8:85a3::",
+      "mask-length6": 64,
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA updated exhaustive variant 2",
+      "color": "orange",
+      "icon": "NetworkObjects/network",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689178580,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689178175,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true
+  },
+  {
+    "type": "network",
+    "variant": 2,
+    "command": "show-network",
+    "payload": {
+      "name": "QA_NETWORK_2_134",
+      "details-level": "full"
+    },
+    "response": {
+      "uid": "2c63f557-b754-47ff-bad6-aaa7a8783d54",
+      "name": "QA_NETWORK_2_134",
+      "type": "network",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "broadcast": "allow",
+      "subnet6": "2001:db8:85a3::",
+      "mask-length6": 64,
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA updated exhaustive variant 2",
+      "color": "orange",
+      "icon": "NetworkObjects/network",
+      "tags": [],
+      "meta-info": {
+        "lock": "locked by current session",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689178580,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689178175,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": false,
+      "available-actions": {
+        "edit": "true",
+        "delete": "true",
+        "clone": "true"
+      }
+    },
+    "success": true
+  },
+  {
+    "type": "network",
+    "variant": 2,
+    "command": "delete-network",
+    "payload": {
+      "name": "QA_NETWORK_2_134"
+    },
+    "response": {
+      "message": "OK"
+    },
+    "success": true
+  },
+  {
+    "type": "network",
+    "variant": 3,
+    "command": "add-network",
+    "payload": {
+      "nat-settings": {
+        "auto-rule": "true",
+        "method": "hide",
+        "hide-behind": "gateway"
+      },
+      "broadcast": "allow",
+      "name": "QA_NETWORK_3_450",
+      "set-if-exists": true,
+      "color": "dark gold",
+      "comments": "QA Automated Test Object",
+      "details-level": "uid",
+      "groups": [],
+      "tags": [],
+      "ignore-warnings": true,
+      "ignore-errors": true,
+      "subnet": "10.100.0.0",
+      "mask-length4": 24
+    },
+    "response": {
+      "uid": "f02a0280-549c-4e88-a1ed-7ef830e92f2f",
+      "name": "QA_NETWORK_3_450",
+      "type": "network",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "broadcast": "allow",
+      "subnet4": "10.100.0.0",
+      "mask-length4": 24,
+      "subnet-mask": "255.255.255.0",
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA Automated Test Object",
+      "color": "dark gold",
+      "icon": "NetworkObjects/network",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689179113,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689179113,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true,
+    "attempts": 1
+  },
+  {
+    "type": "network",
+    "variant": 3,
+    "command": "set-network",
+    "payload": {
+      "name": "QA_NETWORK_3_450",
+      "comments": "QA updated exhaustive variant 3",
+      "color": "orange"
+    },
+    "response": {
+      "uid": "f02a0280-549c-4e88-a1ed-7ef830e92f2f",
+      "name": "QA_NETWORK_3_450",
+      "type": "network",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "broadcast": "allow",
+      "subnet4": "10.100.0.0",
+      "mask-length4": 24,
+      "subnet-mask": "255.255.255.0",
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA updated exhaustive variant 3",
+      "color": "orange",
+      "icon": "NetworkObjects/network",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689179616,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689179113,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true
+  },
+  {
+    "type": "network",
+    "variant": 3,
+    "command": "show-network",
+    "payload": {
+      "name": "QA_NETWORK_3_450",
+      "details-level": "full"
+    },
+    "response": {
+      "uid": "f02a0280-549c-4e88-a1ed-7ef830e92f2f",
+      "name": "QA_NETWORK_3_450",
+      "type": "network",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "broadcast": "allow",
+      "subnet4": "10.100.0.0",
+      "mask-length4": 24,
+      "subnet-mask": "255.255.255.0",
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA updated exhaustive variant 3",
+      "color": "orange",
+      "icon": "NetworkObjects/network",
+      "tags": [],
+      "meta-info": {
+        "lock": "locked by current session",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689179616,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689179113,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": false,
+      "available-actions": {
+        "edit": "true",
+        "delete": "true",
+        "clone": "true"
+      }
+    },
+    "success": true
+  },
+  {
+    "type": "network",
+    "variant": 3,
+    "command": "delete-network",
+    "payload": {
+      "name": "QA_NETWORK_3_450"
+    },
+    "response": {
+      "message": "OK"
+    },
+    "success": true
+  },
+  {
+    "type": "network",
+    "variant": 4,
+    "command": "add-network",
+    "payload": {
+      "nat-settings": {
+        "auto-rule": "true",
+        "method": "hide",
+        "hide-behind": "gateway"
+      },
+      "broadcast": "allow",
+      "name": "QA_NETWORK_4_910",
+      "set-if-exists": true,
+      "color": "dark gold",
+      "comments": "QA Automated Test Object",
+      "details-level": "uid",
+      "groups": [],
+      "tags": [],
+      "ignore-warnings": true,
+      "ignore-errors": true,
+      "subnet": "10.100.0.0",
+      "mask-length": 24
+    },
+    "response": {
+      "uid": "126a1f69-1839-45c1-8336-52c8c98ad03f",
+      "name": "QA_NETWORK_4_910",
+      "type": "network",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "broadcast": "allow",
+      "subnet4": "10.100.0.0",
+      "mask-length4": 24,
+      "subnet-mask": "255.255.255.0",
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA Automated Test Object",
+      "color": "dark gold",
+      "icon": "NetworkObjects/network",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689181543,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689181543,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true,
+    "attempts": 2
+  },
+  {
+    "type": "network",
+    "variant": 4,
+    "command": "set-network",
+    "payload": {
+      "name": "QA_NETWORK_4_910",
+      "comments": "QA updated exhaustive variant 4",
+      "color": "orange"
+    },
+    "response": {
+      "uid": "126a1f69-1839-45c1-8336-52c8c98ad03f",
+      "name": "QA_NETWORK_4_910",
+      "type": "network",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "broadcast": "allow",
+      "subnet4": "10.100.0.0",
+      "mask-length4": 24,
+      "subnet-mask": "255.255.255.0",
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA updated exhaustive variant 4",
+      "color": "orange",
+      "icon": "NetworkObjects/network",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689182151,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689181543,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true
+  },
+  {
+    "type": "network",
+    "variant": 4,
+    "command": "show-network",
+    "payload": {
+      "name": "QA_NETWORK_4_910",
+      "details-level": "full"
+    },
+    "response": {
+      "uid": "126a1f69-1839-45c1-8336-52c8c98ad03f",
+      "name": "QA_NETWORK_4_910",
+      "type": "network",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "broadcast": "allow",
+      "subnet4": "10.100.0.0",
+      "mask-length4": 24,
+      "subnet-mask": "255.255.255.0",
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA updated exhaustive variant 4",
+      "color": "orange",
+      "icon": "NetworkObjects/network",
+      "tags": [],
+      "meta-info": {
+        "lock": "locked by current session",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689182151,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689181543,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": false,
+      "available-actions": {
+        "edit": "true",
+        "delete": "true",
+        "clone": "true"
+      }
+    },
+    "success": true
+  },
+  {
+    "type": "network",
+    "variant": 4,
+    "command": "delete-network",
+    "payload": {
+      "name": "QA_NETWORK_4_910"
+    },
+    "response": {
+      "message": "OK"
+    },
+    "success": true
+  },
+  {
+    "type": "network",
+    "variant": 5,
+    "command": "add-network",
+    "payload": {
+      "nat-settings": {
+        "auto-rule": "true",
+        "method": "hide",
+        "hide-behind": "gateway"
+      },
+      "broadcast": "allow",
+      "name": "QA_NETWORK_5_561",
+      "set-if-exists": true,
+      "color": "dark gold",
+      "comments": "QA Automated Test Object",
+      "details-level": "uid",
+      "groups": [],
+      "tags": [],
+      "ignore-warnings": true,
+      "ignore-errors": true,
+      "subnet": "10.100.0.0",
+      "subnet-mask": "255.255.0.0"
+    },
+    "response": {
+      "uid": "54353714-fcbf-4bb3-a969-62f346903d60",
+      "name": "QA_NETWORK_5_561",
+      "type": "network",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "broadcast": "allow",
+      "subnet4": "10.100.0.0",
+      "mask-length4": 16,
+      "subnet-mask": "255.255.0.0",
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA Automated Test Object",
+      "color": "dark gold",
+      "icon": "NetworkObjects/network",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689182898,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689182898,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true,
+    "attempts": 2
+  },
+  {
+    "type": "network",
+    "variant": 5,
+    "command": "set-network",
+    "payload": {
+      "name": "QA_NETWORK_5_561",
+      "comments": "QA updated exhaustive variant 5",
+      "color": "orange"
+    },
+    "response": {
+      "uid": "54353714-fcbf-4bb3-a969-62f346903d60",
+      "name": "QA_NETWORK_5_561",
+      "type": "network",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "broadcast": "allow",
+      "subnet4": "10.100.0.0",
+      "mask-length4": 16,
+      "subnet-mask": "255.255.0.0",
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA updated exhaustive variant 5",
+      "color": "orange",
+      "icon": "NetworkObjects/network",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689183384,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689182898,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true
+  },
+  {
+    "type": "network",
+    "variant": 5,
+    "command": "show-network",
+    "payload": {
+      "name": "QA_NETWORK_5_561",
+      "details-level": "full"
+    },
+    "response": {
+      "uid": "54353714-fcbf-4bb3-a969-62f346903d60",
+      "name": "QA_NETWORK_5_561",
+      "type": "network",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "broadcast": "allow",
+      "subnet4": "10.100.0.0",
+      "mask-length4": 16,
+      "subnet-mask": "255.255.0.0",
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA updated exhaustive variant 5",
+      "color": "orange",
+      "icon": "NetworkObjects/network",
+      "tags": [],
+      "meta-info": {
+        "lock": "locked by current session",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689183384,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689182898,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": false,
+      "available-actions": {
+        "edit": "true",
+        "delete": "true",
+        "clone": "true"
+      }
+    },
+    "success": true
+  },
+  {
+    "type": "network",
+    "variant": 5,
+    "command": "delete-network",
+    "payload": {
+      "name": "QA_NETWORK_5_561"
+    },
+    "response": {
+      "message": "OK"
+    },
+    "success": true
+  },
+  {
+    "type": "group",
+    "variant": 0,
+    "command": "add-group",
+    "payload": {
+      "members": [],
+      "name": "QA_GROUP_0_752",
+      "color": "gold",
+      "comments": "QA Automated Test Object",
+      "details-level": "uid",
+      "groups": [],
+      "tags": [],
+      "ignore-warnings": true,
+      "ignore-errors": true
+    },
+    "response": {
+      "uid": "1167c17d-a278-4afc-a1fc-e9511c3b4ac1",
+      "name": "QA_GROUP_0_752",
+      "type": "group",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "members": [],
+      "groups": [],
+      "comments": "QA Automated Test Object",
+      "color": "gold",
+      "icon": "General/group",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689183968,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689183968,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true,
+    "attempts": 1
+  },
+  {
+    "type": "group",
+    "variant": 0,
+    "command": "set-group",
+    "payload": {
+      "name": "QA_GROUP_0_752",
+      "comments": "QA updated exhaustive variant 0",
+      "color": "orange"
+    },
+    "response": {
+      "uid": "1167c17d-a278-4afc-a1fc-e9511c3b4ac1",
+      "name": "QA_GROUP_0_752",
+      "type": "group",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "members": [],
+      "groups": [],
+      "comments": "QA updated exhaustive variant 0",
+      "color": "orange",
+      "icon": "General/group",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689184051,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689183968,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true
+  },
+  {
+    "type": "group",
+    "variant": 0,
+    "command": "show-group",
+    "payload": {
+      "name": "QA_GROUP_0_752",
+      "details-level": "full"
+    },
+    "response": {
+      "uid": "1167c17d-a278-4afc-a1fc-e9511c3b4ac1",
+      "name": "QA_GROUP_0_752",
+      "type": "group",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "members": [],
+      "groups": [],
+      "comments": "QA updated exhaustive variant 0",
+      "color": "orange",
+      "icon": "General/group",
+      "tags": [],
+      "meta-info": {
+        "lock": "locked by current session",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689184051,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689183968,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": false,
+      "available-actions": {
+        "edit": "true",
+        "delete": "true",
+        "clone": "true"
+      }
+    },
+    "success": true
+  },
+  {
+    "type": "group",
+    "variant": 0,
+    "command": "delete-group",
+    "payload": {
+      "name": "QA_GROUP_0_752"
+    },
+    "response": {
+      "message": "OK"
+    },
+    "success": true
+  },
+  {
+    "type": "address-range",
+    "variant": 0,
+    "command": "add-address-range",
+    "payload": {
+      "nat-settings": {
+        "auto-rule": "true",
+        "method": "hide",
+        "hide-behind": "gateway"
+      },
+      "name": "QA_ADDRESS-RANGE_0_236",
+      "set-if-exists": true,
+      "color": "orchid",
+      "comments": "QA Automated Test Object",
+      "details-level": "standard",
+      "groups": [],
+      "tags": [],
+      "ignore-warnings": true,
+      "ignore-errors": true,
+      "ip-address-first": "10.100.1.10",
+      "ip-address-last": "10.100.1.30"
+    },
+    "response": {
+      "uid": "1609a5cf-0de5-4419-8ce4-a0ba06a48e6a",
+      "name": "QA_ADDRESS-RANGE_0_236",
+      "type": "address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address-first": "10.100.1.10",
+      "ipv4-address-last": "10.100.1.30",
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA Automated Test Object",
+      "color": "orchid",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689184362,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689184362,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true,
+    "attempts": 1
+  },
+  {
+    "type": "address-range",
+    "variant": 0,
+    "command": "set-address-range",
+    "payload": {
+      "name": "QA_ADDRESS-RANGE_0_236",
+      "comments": "QA updated exhaustive variant 0",
+      "color": "orange"
+    },
+    "response": {
+      "uid": "1609a5cf-0de5-4419-8ce4-a0ba06a48e6a",
+      "name": "QA_ADDRESS-RANGE_0_236",
+      "type": "address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address-first": "10.100.1.10",
+      "ipv4-address-last": "10.100.1.30",
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA updated exhaustive variant 0",
+      "color": "orange",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689184965,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689184362,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true
+  },
+  {
+    "type": "address-range",
+    "variant": 0,
+    "command": "show-address-range",
+    "payload": {
+      "name": "QA_ADDRESS-RANGE_0_236",
+      "details-level": "full"
+    },
+    "response": {
+      "uid": "1609a5cf-0de5-4419-8ce4-a0ba06a48e6a",
+      "name": "QA_ADDRESS-RANGE_0_236",
+      "type": "address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address-first": "10.100.1.10",
+      "ipv4-address-last": "10.100.1.30",
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA updated exhaustive variant 0",
+      "color": "orange",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "locked by current session",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689184965,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689184362,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": false,
+      "available-actions": {
+        "edit": "true",
+        "delete": "true",
+        "clone": "true"
+      }
+    },
+    "success": true
+  },
+  {
+    "type": "address-range",
+    "variant": 0,
+    "command": "delete-address-range",
+    "payload": {
+      "name": "QA_ADDRESS-RANGE_0_236"
+    },
+    "response": {
+      "message": "OK"
+    },
+    "success": true
+  },
+  {
+    "type": "address-range",
+    "variant": 1,
+    "command": "add-address-range",
+    "payload": {
+      "nat-settings": {
+        "auto-rule": "true",
+        "method": "hide",
+        "hide-behind": "gateway"
+      },
+      "name": "QA_ADDRESS-RANGE_1_341",
+      "set-if-exists": true,
+      "color": "orchid",
+      "comments": "QA Automated Test Object",
+      "details-level": "standard",
+      "groups": [],
+      "tags": [],
+      "ignore-warnings": true,
+      "ignore-errors": true,
+      "ipv4-address-first": "10.100.1.10",
+      "ipv4-address-last": "10.100.1.30"
+    },
+    "response": {
+      "uid": "34d80e56-4b2d-4c38-b275-eb10bdad03c9",
+      "name": "QA_ADDRESS-RANGE_1_341",
+      "type": "address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address-first": "10.100.1.10",
+      "ipv4-address-last": "10.100.1.30",
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA Automated Test Object",
+      "color": "orchid",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689185545,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689185545,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true,
+    "attempts": 1
+  },
+  {
+    "type": "address-range",
+    "variant": 1,
+    "command": "set-address-range",
+    "payload": {
+      "name": "QA_ADDRESS-RANGE_1_341",
+      "comments": "QA updated exhaustive variant 1",
+      "color": "orange"
+    },
+    "response": {
+      "uid": "34d80e56-4b2d-4c38-b275-eb10bdad03c9",
+      "name": "QA_ADDRESS-RANGE_1_341",
+      "type": "address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address-first": "10.100.1.10",
+      "ipv4-address-last": "10.100.1.30",
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA updated exhaustive variant 1",
+      "color": "orange",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689186003,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689185545,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true
+  },
+  {
+    "type": "address-range",
+    "variant": 1,
+    "command": "show-address-range",
+    "payload": {
+      "name": "QA_ADDRESS-RANGE_1_341",
+      "details-level": "full"
+    },
+    "response": {
+      "uid": "34d80e56-4b2d-4c38-b275-eb10bdad03c9",
+      "name": "QA_ADDRESS-RANGE_1_341",
+      "type": "address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address-first": "10.100.1.10",
+      "ipv4-address-last": "10.100.1.30",
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA updated exhaustive variant 1",
+      "color": "orange",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "locked by current session",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689186003,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689185545,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": false,
+      "available-actions": {
+        "edit": "true",
+        "delete": "true",
+        "clone": "true"
+      }
+    },
+    "success": true
+  },
+  {
+    "type": "address-range",
+    "variant": 1,
+    "command": "delete-address-range",
+    "payload": {
+      "name": "QA_ADDRESS-RANGE_1_341"
+    },
+    "response": {
+      "message": "OK"
+    },
+    "success": true
+  },
+  {
+    "type": "address-range",
+    "variant": 2,
+    "command": "add-address-range",
+    "payload": {
+      "nat-settings": {
+        "auto-rule": "true",
+        "method": "hide",
+        "hide-behind": "gateway"
+      },
+      "name": "QA_ADDRESS-RANGE_2_882",
+      "set-if-exists": true,
+      "color": "orchid",
+      "comments": "QA Automated Test Object",
+      "details-level": "standard",
+      "groups": [],
+      "tags": [],
+      "ignore-warnings": true,
+      "ignore-errors": true,
+      "ipv6-address-first": "2001:db8:85a3::1214",
+      "ipv6-address-last": "2001:db8:85a3::265e"
+    },
+    "response": {
+      "uid": "eced9d5f-4353-4d35-9002-f901237a2f39",
+      "name": "QA_ADDRESS-RANGE_2_882",
+      "type": "address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv6-address-first": "2001:db8:85a3::1214",
+      "ipv6-address-last": "2001:db8:85a3::265e",
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA Automated Test Object",
+      "color": "orchid",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689186536,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689186536,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true,
+    "attempts": 1
+  },
+  {
+    "type": "address-range",
+    "variant": 2,
+    "command": "set-address-range",
+    "payload": {
+      "name": "QA_ADDRESS-RANGE_2_882",
+      "comments": "QA updated exhaustive variant 2",
+      "color": "orange"
+    },
+    "response": {
+      "uid": "eced9d5f-4353-4d35-9002-f901237a2f39",
+      "name": "QA_ADDRESS-RANGE_2_882",
+      "type": "address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv6-address-first": "2001:db8:85a3::1214",
+      "ipv6-address-last": "2001:db8:85a3::265e",
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA updated exhaustive variant 2",
+      "color": "orange",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689186982,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689186536,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true
+  },
+  {
+    "type": "address-range",
+    "variant": 2,
+    "command": "show-address-range",
+    "payload": {
+      "name": "QA_ADDRESS-RANGE_2_882",
+      "details-level": "full"
+    },
+    "response": {
+      "uid": "eced9d5f-4353-4d35-9002-f901237a2f39",
+      "name": "QA_ADDRESS-RANGE_2_882",
+      "type": "address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv6-address-first": "2001:db8:85a3::1214",
+      "ipv6-address-last": "2001:db8:85a3::265e",
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA updated exhaustive variant 2",
+      "color": "orange",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "locked by current session",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689186982,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689186536,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": false,
+      "available-actions": {
+        "edit": "true",
+        "delete": "true",
+        "clone": "true"
+      }
+    },
+    "success": true
+  },
+  {
+    "type": "address-range",
+    "variant": 2,
+    "command": "delete-address-range",
+    "payload": {
+      "name": "QA_ADDRESS-RANGE_2_882"
+    },
+    "response": {
+      "message": "OK"
+    },
+    "success": true
+  },
+  {
+    "type": "address-range",
+    "variant": 3,
+    "command": "add-address-range",
+    "payload": {
+      "nat-settings": {
+        "auto-rule": "true",
+        "method": "hide",
+        "hide-behind": "gateway"
+      },
+      "name": "QA_ADDRESS-RANGE_3_882",
+      "set-if-exists": true,
+      "color": "orchid",
+      "comments": "QA Automated Test Object",
+      "details-level": "standard",
+      "groups": [],
+      "tags": [],
+      "ignore-warnings": true,
+      "ignore-errors": true,
+      "ipv4-address-last": "10.100.1.30",
+      "ipv4-address-first": "10.100.1.10"
+    },
+    "response": {
+      "uid": "98597320-6180-41f4-bb42-d8ca332ea3d9",
+      "name": "QA_ADDRESS-RANGE_3_882",
+      "type": "address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address-first": "10.100.1.10",
+      "ipv4-address-last": "10.100.1.30",
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA Automated Test Object",
+      "color": "orchid",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689187626,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689187626,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true,
+    "attempts": 1
+  },
+  {
+    "type": "address-range",
+    "variant": 3,
+    "command": "set-address-range",
+    "payload": {
+      "name": "QA_ADDRESS-RANGE_3_882",
+      "comments": "QA updated exhaustive variant 3",
+      "color": "orange"
+    },
+    "response": {
+      "uid": "98597320-6180-41f4-bb42-d8ca332ea3d9",
+      "name": "QA_ADDRESS-RANGE_3_882",
+      "type": "address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address-first": "10.100.1.10",
+      "ipv4-address-last": "10.100.1.30",
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA updated exhaustive variant 3",
+      "color": "orange",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689188184,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689187626,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true
+  },
+  {
+    "type": "address-range",
+    "variant": 3,
+    "command": "show-address-range",
+    "payload": {
+      "name": "QA_ADDRESS-RANGE_3_882",
+      "details-level": "full"
+    },
+    "response": {
+      "uid": "98597320-6180-41f4-bb42-d8ca332ea3d9",
+      "name": "QA_ADDRESS-RANGE_3_882",
+      "type": "address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address-first": "10.100.1.10",
+      "ipv4-address-last": "10.100.1.30",
+      "nat-settings": {
+        "auto-rule": true,
+        "hide-behind": "gateway",
+        "install-on": "All",
+        "method": "hide"
+      },
+      "groups": [],
+      "comments": "QA updated exhaustive variant 3",
+      "color": "orange",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "locked by current session",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689188184,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689187626,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": false,
+      "available-actions": {
+        "edit": "true",
+        "delete": "true",
+        "clone": "true"
+      }
+    },
+    "success": true
+  },
+  {
+    "type": "address-range",
+    "variant": 3,
+    "command": "delete-address-range",
+    "payload": {
+      "name": "QA_ADDRESS-RANGE_3_882"
+    },
+    "response": {
+      "message": "OK"
+    },
+    "success": true
+  },
+  {
+    "type": "address-range",
+    "variant": 4,
+    "command": "add-address-range",
+    "payload": {
+      "nat-settings": {
+        "auto-rule": "true",
+        "method": "hide",
+        "hide-behind": "gateway"
+      },
+      "name": "QA_ADDRESS-RANGE_4_331",
+      "groups": [],
+      "ignore-warnings": true,
+      "ignore-errors": true,
+      "ipv6-address-last": "2001:db8:85a3::1ea7",
+      "ipv6-address-first": "2001:db8:85a3::2dc9"
+    },
+    "response": {
+      "code": "err_validation_failed",
+      "message": "Validation failed with 1 blocking-error",
+      "blocking-errors": [
+        {
+          "message": "Address range is not valid"
+        }
+      ]
+    },
+    "success": false,
+    "attempts": 5
+  },
+  {
+    "type": "multicast-address-range",
+    "variant": 0,
+    "command": "add-multicast-address-range",
+    "payload": {
+      "ip-address-first": "224.0.1.10",
+      "ip-address-last": "224.0.1.30",
+      "name": "QA_MULTICAST-ADDRESS-RANGE_0_533",
+      "set-if-exists": true,
+      "color": "magenta",
+      "comments": "QA Automated Test Object",
+      "details-level": "standard",
+      "groups": [],
+      "tags": [],
+      "ignore-warnings": true,
+      "ignore-errors": true
+    },
+    "response": {
+      "uid": "3b5cb1a1-80fb-4db8-bbd0-11fac4760f81",
+      "name": "QA_MULTICAST-ADDRESS-RANGE_0_533",
+      "type": "multicast-address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address-first": "224.0.1.10",
+      "ipv4-address-last": "224.0.1.30",
+      "groups": [],
+      "comments": "QA Automated Test Object",
+      "color": "magenta",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689189237,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689189237,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true,
+    "attempts": 2
+  },
+  {
+    "type": "multicast-address-range",
+    "variant": 0,
+    "command": "set-multicast-address-range",
+    "payload": {
+      "name": "QA_MULTICAST-ADDRESS-RANGE_0_533",
+      "comments": "QA updated exhaustive variant 0",
+      "color": "orange"
+    },
+    "response": {
+      "uid": "3b5cb1a1-80fb-4db8-bbd0-11fac4760f81",
+      "name": "QA_MULTICAST-ADDRESS-RANGE_0_533",
+      "type": "multicast-address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address-first": "224.0.1.10",
+      "ipv4-address-last": "224.0.1.30",
+      "groups": [],
+      "comments": "QA updated exhaustive variant 0",
+      "color": "orange",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689189336,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689189237,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true
+  },
+  {
+    "type": "multicast-address-range",
+    "variant": 0,
+    "command": "show-multicast-address-range",
+    "payload": {
+      "name": "QA_MULTICAST-ADDRESS-RANGE_0_533",
+      "details-level": "full"
+    },
+    "response": {
+      "uid": "3b5cb1a1-80fb-4db8-bbd0-11fac4760f81",
+      "name": "QA_MULTICAST-ADDRESS-RANGE_0_533",
+      "type": "multicast-address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address-first": "224.0.1.10",
+      "ipv4-address-last": "224.0.1.30",
+      "groups": [],
+      "comments": "QA updated exhaustive variant 0",
+      "color": "orange",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "locked by current session",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689189336,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689189237,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": false,
+      "available-actions": {
+        "edit": "true",
+        "delete": "true",
+        "clone": "true"
+      }
+    },
+    "success": true
+  },
+  {
+    "type": "multicast-address-range",
+    "variant": 0,
+    "command": "delete-multicast-address-range",
+    "payload": {
+      "name": "QA_MULTICAST-ADDRESS-RANGE_0_533"
+    },
+    "response": {
+      "message": "OK"
+    },
+    "success": true
+  },
+  {
+    "type": "multicast-address-range",
+    "variant": 1,
+    "command": "add-multicast-address-range",
+    "payload": {
+      "name": "QA_MULTICAST-ADDRESS-RANGE_1_124",
+      "set-if-exists": true,
+      "color": "magenta",
+      "comments": "QA Automated Test Object",
+      "details-level": "standard",
+      "groups": [],
+      "tags": [],
+      "ignore-warnings": true,
+      "ignore-errors": true,
+      "ipv4-address": "224.0.1.20"
+    },
+    "response": {
+      "uid": "a4a330b4-2f8d-4955-8b1c-f925401ac89d",
+      "name": "QA_MULTICAST-ADDRESS-RANGE_1_124",
+      "type": "multicast-address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address-first": "224.0.1.20",
+      "ipv4-address-last": "224.0.1.20",
+      "groups": [],
+      "comments": "QA Automated Test Object",
+      "color": "magenta",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689189659,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689189659,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true,
+    "attempts": 2
+  },
+  {
+    "type": "multicast-address-range",
+    "variant": 1,
+    "command": "set-multicast-address-range",
+    "payload": {
+      "name": "QA_MULTICAST-ADDRESS-RANGE_1_124",
+      "comments": "QA updated exhaustive variant 1",
+      "color": "orange"
+    },
+    "response": {
+      "uid": "a4a330b4-2f8d-4955-8b1c-f925401ac89d",
+      "name": "QA_MULTICAST-ADDRESS-RANGE_1_124",
+      "type": "multicast-address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address-first": "224.0.1.20",
+      "ipv4-address-last": "224.0.1.20",
+      "groups": [],
+      "comments": "QA updated exhaustive variant 1",
+      "color": "orange",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689189767,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689189659,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true
+  },
+  {
+    "type": "multicast-address-range",
+    "variant": 1,
+    "command": "show-multicast-address-range",
+    "payload": {
+      "name": "QA_MULTICAST-ADDRESS-RANGE_1_124",
+      "details-level": "full"
+    },
+    "response": {
+      "uid": "a4a330b4-2f8d-4955-8b1c-f925401ac89d",
+      "name": "QA_MULTICAST-ADDRESS-RANGE_1_124",
+      "type": "multicast-address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address-first": "224.0.1.20",
+      "ipv4-address-last": "224.0.1.20",
+      "groups": [],
+      "comments": "QA updated exhaustive variant 1",
+      "color": "orange",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "locked by current session",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689189767,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689189659,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": false,
+      "available-actions": {
+        "edit": "true",
+        "delete": "true",
+        "clone": "true"
+      }
+    },
+    "success": true
+  },
+  {
+    "type": "multicast-address-range",
+    "variant": 1,
+    "command": "delete-multicast-address-range",
+    "payload": {
+      "name": "QA_MULTICAST-ADDRESS-RANGE_1_124"
+    },
+    "response": {
+      "message": "OK"
+    },
+    "success": true
+  },
+  {
+    "type": "multicast-address-range",
+    "variant": 2,
+    "command": "add-multicast-address-range",
+    "payload": {
+      "ip-address-first": "224.0.1.10",
+      "ip-address-last": "224.0.1.30",
+      "name": "QA_MULTICAST-ADDRESS-RANGE_2_263",
+      "set-if-exists": true,
+      "color": "magenta",
+      "comments": "QA Automated Test Object",
+      "details-level": "standard",
+      "groups": [],
+      "tags": [],
+      "ignore-warnings": true,
+      "ignore-errors": true,
+      "ipv6-address": "ff05::1:10"
+    },
+    "response": {
+      "uid": "48a97a84-c494-41e3-9c1a-4770762e78ef",
+      "name": "QA_MULTICAST-ADDRESS-RANGE_2_263",
+      "type": "multicast-address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address-first": "224.0.1.10",
+      "ipv6-address-first": "ff05::1:10",
+      "ipv4-address-last": "224.0.1.30",
+      "ipv6-address-last": "ff05::1:10",
+      "groups": [],
+      "comments": "QA Automated Test Object",
+      "color": "magenta",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689190005,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689190005,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true,
+    "attempts": 1
+  },
+  {
+    "type": "multicast-address-range",
+    "variant": 2,
+    "command": "set-multicast-address-range",
+    "payload": {
+      "name": "QA_MULTICAST-ADDRESS-RANGE_2_263",
+      "comments": "QA updated exhaustive variant 2",
+      "color": "orange"
+    },
+    "response": {
+      "uid": "48a97a84-c494-41e3-9c1a-4770762e78ef",
+      "name": "QA_MULTICAST-ADDRESS-RANGE_2_263",
+      "type": "multicast-address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address-first": "224.0.1.10",
+      "ipv6-address-first": "ff05::1:10",
+      "ipv4-address-last": "224.0.1.30",
+      "ipv6-address-last": "ff05::1:10",
+      "groups": [],
+      "comments": "QA updated exhaustive variant 2",
+      "color": "orange",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689190093,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689190005,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true
+  },
+  {
+    "type": "multicast-address-range",
+    "variant": 2,
+    "command": "show-multicast-address-range",
+    "payload": {
+      "name": "QA_MULTICAST-ADDRESS-RANGE_2_263",
+      "details-level": "full"
+    },
+    "response": {
+      "uid": "48a97a84-c494-41e3-9c1a-4770762e78ef",
+      "name": "QA_MULTICAST-ADDRESS-RANGE_2_263",
+      "type": "multicast-address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address-first": "224.0.1.10",
+      "ipv6-address-first": "ff05::1:10",
+      "ipv4-address-last": "224.0.1.30",
+      "ipv6-address-last": "ff05::1:10",
+      "groups": [],
+      "comments": "QA updated exhaustive variant 2",
+      "color": "orange",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "locked by current session",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689190093,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689190005,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": false,
+      "available-actions": {
+        "edit": "true",
+        "delete": "true",
+        "clone": "true"
+      }
+    },
+    "success": true
+  },
+  {
+    "type": "multicast-address-range",
+    "variant": 2,
+    "command": "delete-multicast-address-range",
+    "payload": {
+      "name": "QA_MULTICAST-ADDRESS-RANGE_2_263"
+    },
+    "response": {
+      "message": "OK"
+    },
+    "success": true
+  },
+  {
+    "type": "multicast-address-range",
+    "variant": 3,
+    "command": "add-multicast-address-range",
+    "payload": {
+      "name": "QA_MULTICAST-ADDRESS-RANGE_3_956",
+      "set-if-exists": true,
+      "color": "magenta",
+      "comments": "QA Automated Test Object",
+      "details-level": "standard",
+      "groups": [],
+      "tags": [],
+      "ignore-warnings": true,
+      "ignore-errors": true,
+      "ipv4-address-first": "224.0.1.10",
+      "ipv4-address-last": "224.0.1.30"
+    },
+    "response": {
+      "uid": "8793a806-db41-4513-98fb-552e48d18dba",
+      "name": "QA_MULTICAST-ADDRESS-RANGE_3_956",
+      "type": "multicast-address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address-first": "224.0.1.10",
+      "ipv4-address-last": "224.0.1.30",
+      "groups": [],
+      "comments": "QA Automated Test Object",
+      "color": "magenta",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689192187,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689192187,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true,
+    "attempts": 2
+  },
+  {
+    "type": "multicast-address-range",
+    "variant": 3,
+    "command": "set-multicast-address-range",
+    "payload": {
+      "name": "QA_MULTICAST-ADDRESS-RANGE_3_956",
+      "comments": "QA updated exhaustive variant 3",
+      "color": "orange"
+    },
+    "response": {
+      "uid": "8793a806-db41-4513-98fb-552e48d18dba",
+      "name": "QA_MULTICAST-ADDRESS-RANGE_3_956",
+      "type": "multicast-address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address-first": "224.0.1.10",
+      "ipv4-address-last": "224.0.1.30",
+      "groups": [],
+      "comments": "QA updated exhaustive variant 3",
+      "color": "orange",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689192289,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689192187,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true
+  },
+  {
+    "type": "multicast-address-range",
+    "variant": 3,
+    "command": "show-multicast-address-range",
+    "payload": {
+      "name": "QA_MULTICAST-ADDRESS-RANGE_3_956",
+      "details-level": "full"
+    },
+    "response": {
+      "uid": "8793a806-db41-4513-98fb-552e48d18dba",
+      "name": "QA_MULTICAST-ADDRESS-RANGE_3_956",
+      "type": "multicast-address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address-first": "224.0.1.10",
+      "ipv4-address-last": "224.0.1.30",
+      "groups": [],
+      "comments": "QA updated exhaustive variant 3",
+      "color": "orange",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "locked by current session",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689192289,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689192187,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": false,
+      "available-actions": {
+        "edit": "true",
+        "delete": "true",
+        "clone": "true"
+      }
+    },
+    "success": true
+  },
+  {
+    "type": "multicast-address-range",
+    "variant": 3,
+    "command": "delete-multicast-address-range",
+    "payload": {
+      "name": "QA_MULTICAST-ADDRESS-RANGE_3_956"
+    },
+    "response": {
+      "message": "OK"
+    },
+    "success": true
+  },
+  {
+    "type": "multicast-address-range",
+    "variant": 4,
+    "command": "add-multicast-address-range",
+    "payload": {
+      "ip-address": "224.0.1.20",
+      "name": "QA_MULTICAST-ADDRESS-RANGE_4_913",
+      "set-if-exists": true,
+      "color": "magenta",
+      "comments": "QA Automated Test Object",
+      "details-level": "standard",
+      "groups": [],
+      "tags": [],
+      "ignore-warnings": true,
+      "ignore-errors": true,
+      "ipv6-address-first": "ff05::1:1",
+      "ipv6-address-last": "ff05::1:30"
+    },
+    "response": {
+      "uid": "d857e15a-191f-4f42-b4ad-75c5fc12735e",
+      "name": "QA_MULTICAST-ADDRESS-RANGE_4_913",
+      "type": "multicast-address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address-first": "224.0.1.20",
+      "ipv6-address-first": "ff05::1:1",
+      "ipv4-address-last": "224.0.1.20",
+      "ipv6-address-last": "ff05::1:30",
+      "groups": [],
+      "comments": "QA Automated Test Object",
+      "color": "magenta",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689192530,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689192530,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true,
+    "attempts": 1
+  },
+  {
+    "type": "multicast-address-range",
+    "variant": 4,
+    "command": "set-multicast-address-range",
+    "payload": {
+      "name": "QA_MULTICAST-ADDRESS-RANGE_4_913",
+      "comments": "QA updated exhaustive variant 4",
+      "color": "orange"
+    },
+    "response": {
+      "uid": "d857e15a-191f-4f42-b4ad-75c5fc12735e",
+      "name": "QA_MULTICAST-ADDRESS-RANGE_4_913",
+      "type": "multicast-address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address-first": "224.0.1.20",
+      "ipv6-address-first": "ff05::1:1",
+      "ipv4-address-last": "224.0.1.20",
+      "ipv6-address-last": "ff05::1:30",
+      "groups": [],
+      "comments": "QA updated exhaustive variant 4",
+      "color": "orange",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689192617,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689192530,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true
+  },
+  {
+    "type": "multicast-address-range",
+    "variant": 4,
+    "command": "show-multicast-address-range",
+    "payload": {
+      "name": "QA_MULTICAST-ADDRESS-RANGE_4_913",
+      "details-level": "full"
+    },
+    "response": {
+      "uid": "d857e15a-191f-4f42-b4ad-75c5fc12735e",
+      "name": "QA_MULTICAST-ADDRESS-RANGE_4_913",
+      "type": "multicast-address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address-first": "224.0.1.20",
+      "ipv6-address-first": "ff05::1:1",
+      "ipv4-address-last": "224.0.1.20",
+      "ipv6-address-last": "ff05::1:30",
+      "groups": [],
+      "comments": "QA updated exhaustive variant 4",
+      "color": "orange",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "locked by current session",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689192617,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689192530,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": false,
+      "available-actions": {
+        "edit": "true",
+        "delete": "true",
+        "clone": "true"
+      }
+    },
+    "success": true
+  },
+  {
+    "type": "multicast-address-range",
+    "variant": 4,
+    "command": "delete-multicast-address-range",
+    "payload": {
+      "name": "QA_MULTICAST-ADDRESS-RANGE_4_913"
+    },
+    "response": {
+      "message": "OK"
+    },
+    "success": true
+  },
+  {
+    "type": "multicast-address-range",
+    "variant": 5,
+    "command": "add-multicast-address-range",
+    "payload": {
+      "name": "QA_MULTICAST-ADDRESS-RANGE_5_442",
+      "set-if-exists": true,
+      "color": "magenta",
+      "comments": "QA Automated Test Object",
+      "details-level": "standard",
+      "groups": [],
+      "tags": [],
+      "ignore-warnings": true,
+      "ignore-errors": true,
+      "ipv4-address-last": "224.0.1.30",
+      "ipv4-address-first": "224.0.1.10"
+    },
+    "response": {
+      "uid": "5831a973-e487-4a33-8785-f058f9246306",
+      "name": "QA_MULTICAST-ADDRESS-RANGE_5_442",
+      "type": "multicast-address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address-first": "224.0.1.10",
+      "ipv4-address-last": "224.0.1.30",
+      "groups": [],
+      "comments": "QA Automated Test Object",
+      "color": "magenta",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689192978,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689192978,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true,
+    "attempts": 2
+  },
+  {
+    "type": "multicast-address-range",
+    "variant": 5,
+    "command": "set-multicast-address-range",
+    "payload": {
+      "name": "QA_MULTICAST-ADDRESS-RANGE_5_442",
+      "comments": "QA updated exhaustive variant 5",
+      "color": "orange"
+    },
+    "response": {
+      "uid": "5831a973-e487-4a33-8785-f058f9246306",
+      "name": "QA_MULTICAST-ADDRESS-RANGE_5_442",
+      "type": "multicast-address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address-first": "224.0.1.10",
+      "ipv4-address-last": "224.0.1.30",
+      "groups": [],
+      "comments": "QA updated exhaustive variant 5",
+      "color": "orange",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689193063,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689192978,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true
+  },
+  {
+    "type": "multicast-address-range",
+    "variant": 5,
+    "command": "show-multicast-address-range",
+    "payload": {
+      "name": "QA_MULTICAST-ADDRESS-RANGE_5_442",
+      "details-level": "full"
+    },
+    "response": {
+      "uid": "5831a973-e487-4a33-8785-f058f9246306",
+      "name": "QA_MULTICAST-ADDRESS-RANGE_5_442",
+      "type": "multicast-address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address-first": "224.0.1.10",
+      "ipv4-address-last": "224.0.1.30",
+      "groups": [],
+      "comments": "QA updated exhaustive variant 5",
+      "color": "orange",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "locked by current session",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689193063,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689192978,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": false,
+      "available-actions": {
+        "edit": "true",
+        "delete": "true",
+        "clone": "true"
+      }
+    },
+    "success": true
+  },
+  {
+    "type": "multicast-address-range",
+    "variant": 5,
+    "command": "delete-multicast-address-range",
+    "payload": {
+      "name": "QA_MULTICAST-ADDRESS-RANGE_5_442"
+    },
+    "response": {
+      "message": "OK"
+    },
+    "success": true
+  },
+  {
+    "type": "multicast-address-range",
+    "variant": 6,
+    "command": "add-multicast-address-range",
+    "payload": {
+      "ip-address": "224.0.1.20",
+      "name": "QA_MULTICAST-ADDRESS-RANGE_6_995",
+      "set-if-exists": true,
+      "color": "magenta",
+      "comments": "QA Automated Test Object",
+      "details-level": "standard",
+      "groups": [],
+      "tags": [],
+      "ignore-warnings": true,
+      "ignore-errors": true,
+      "ipv6-address-last": "ff05::1:30",
+      "ipv6-address-first": "ff05::1:1"
+    },
+    "response": {
+      "uid": "0e658354-a7b1-4492-baf6-6b61a9250c67",
+      "name": "QA_MULTICAST-ADDRESS-RANGE_6_995",
+      "type": "multicast-address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address-first": "224.0.1.20",
+      "ipv6-address-first": "ff05::1:1",
+      "ipv4-address-last": "224.0.1.20",
+      "ipv6-address-last": "ff05::1:30",
+      "groups": [],
+      "comments": "QA Automated Test Object",
+      "color": "magenta",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689193323,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689193323,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true,
+    "attempts": 1
+  },
+  {
+    "type": "multicast-address-range",
+    "variant": 6,
+    "command": "set-multicast-address-range",
+    "payload": {
+      "name": "QA_MULTICAST-ADDRESS-RANGE_6_995",
+      "comments": "QA updated exhaustive variant 6",
+      "color": "orange"
+    },
+    "response": {
+      "uid": "0e658354-a7b1-4492-baf6-6b61a9250c67",
+      "name": "QA_MULTICAST-ADDRESS-RANGE_6_995",
+      "type": "multicast-address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address-first": "224.0.1.20",
+      "ipv6-address-first": "ff05::1:1",
+      "ipv4-address-last": "224.0.1.20",
+      "ipv6-address-last": "ff05::1:30",
+      "groups": [],
+      "comments": "QA updated exhaustive variant 6",
+      "color": "orange",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689193408,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689193323,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true
+  },
+  {
+    "type": "multicast-address-range",
+    "variant": 6,
+    "command": "show-multicast-address-range",
+    "payload": {
+      "name": "QA_MULTICAST-ADDRESS-RANGE_6_995",
+      "details-level": "full"
+    },
+    "response": {
+      "uid": "0e658354-a7b1-4492-baf6-6b61a9250c67",
+      "name": "QA_MULTICAST-ADDRESS-RANGE_6_995",
+      "type": "multicast-address-range",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address-first": "224.0.1.20",
+      "ipv6-address-first": "ff05::1:1",
+      "ipv4-address-last": "224.0.1.20",
+      "ipv6-address-last": "ff05::1:30",
+      "groups": [],
+      "comments": "QA updated exhaustive variant 6",
+      "color": "orange",
+      "icon": "Objects/ip",
+      "tags": [],
+      "meta-info": {
+        "lock": "locked by current session",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689193408,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689193323,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": false,
+      "available-actions": {
+        "edit": "true",
+        "delete": "true",
+        "clone": "true"
+      }
+    },
+    "success": true
+  },
+  {
+    "type": "multicast-address-range",
+    "variant": 6,
+    "command": "delete-multicast-address-range",
+    "payload": {
+      "name": "QA_MULTICAST-ADDRESS-RANGE_6_995"
+    },
+    "response": {
+      "message": "OK"
+    },
+    "success": true
+  },
+  {
+    "type": "group-with-exclusion",
+    "variant": 0,
+    "command": "add-group-with-exclusion",
+    "payload": {
+      "name": "QA_GROUP-WITH-EXCLUSION_0_519",
+      "except": "QA_HELPER_EXCEPT_2980",
+      "include": "QA_HELPER_INCLUDE_6038",
+      "color": "magenta",
+      "comments": "QA Automated Test Object",
+      "details-level": "full",
+      "groups": [],
+      "tags": [],
+      "ignore-warnings": true,
+      "ignore-errors": true
+    },
+    "response": {
+      "uid": "684319f8-5b69-485b-a060-39a4f47d4657",
+      "name": "QA_GROUP-WITH-EXCLUSION_0_519",
+      "type": "group-with-exclusion",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "include": {
+        "uid": "8084acc8-a47b-4c84-a976-db9e636c8cfe",
+        "name": "QA_HELPER_INCLUDE_6038",
+        "type": "group",
+        "domain": {
+          "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+          "name": "SMC User",
+          "domain-type": "domain"
+        },
+        "members": [],
+        "groups": [],
+        "comments": "",
+        "color": "black",
+        "icon": "General/group",
+        "tags": [],
+        "meta-info": {
+          "lock": "locked by current session",
+          "validation-state": "ok",
+          "last-modify-time": {
+            "posix": 1770689193668,
+            "iso-8601": "2026-02-09T21:06-0500"
+          },
+          "last-modifier": "admin",
+          "creation-time": {
+            "posix": 1770689193668,
+            "iso-8601": "2026-02-09T21:06-0500"
+          },
+          "creator": "admin"
+        },
+        "read-only": false,
+        "available-actions": {
+          "edit": "true",
+          "delete": "true",
+          "clone": "true"
+        }
+      },
+      "except": {
+        "uid": "cd6a9fef-3e6a-4a87-bc2d-db15c41c3f0e",
+        "name": "QA_HELPER_EXCEPT_2980",
+        "type": "group",
+        "domain": {
+          "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+          "name": "SMC User",
+          "domain-type": "domain"
+        },
+        "members": [],
+        "groups": [],
+        "comments": "",
+        "color": "black",
+        "icon": "General/group",
+        "tags": [],
+        "meta-info": {
+          "lock": "locked by current session",
+          "validation-state": "ok",
+          "last-modify-time": {
+            "posix": 1770689193758,
+            "iso-8601": "2026-02-09T21:06-0500"
+          },
+          "last-modifier": "admin",
+          "creation-time": {
+            "posix": 1770689193758,
+            "iso-8601": "2026-02-09T21:06-0500"
+          },
+          "creator": "admin"
+        },
+        "read-only": false,
+        "available-actions": {
+          "edit": "true",
+          "delete": "true",
+          "clone": "true"
+        }
+      },
+      "groups": [],
+      "comments": "QA Automated Test Object",
+      "color": "magenta",
+      "icon": "General/group",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689193957,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689193957,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true,
+    "attempts": 1
+  },
+  {
+    "type": "group-with-exclusion",
+    "variant": 0,
+    "command": "set-group-with-exclusion",
+    "payload": {
+      "name": "QA_GROUP-WITH-EXCLUSION_0_519",
+      "comments": "QA updated exhaustive variant 0",
+      "color": "orange"
+    },
+    "response": {
+      "uid": "684319f8-5b69-485b-a060-39a4f47d4657",
+      "name": "QA_GROUP-WITH-EXCLUSION_0_519",
+      "type": "group-with-exclusion",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "include": {
+        "uid": "8084acc8-a47b-4c84-a976-db9e636c8cfe",
+        "name": "QA_HELPER_INCLUDE_6038",
+        "type": "group",
+        "domain": {
+          "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+          "name": "SMC User",
+          "domain-type": "domain"
+        },
+        "icon": "General/group",
+        "color": "black"
+      },
+      "except": {
+        "uid": "cd6a9fef-3e6a-4a87-bc2d-db15c41c3f0e",
+        "name": "QA_HELPER_EXCEPT_2980",
+        "type": "group",
+        "domain": {
+          "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+          "name": "SMC User",
+          "domain-type": "domain"
+        },
+        "icon": "General/group",
+        "color": "black"
+      },
+      "groups": [],
+      "comments": "QA updated exhaustive variant 0",
+      "color": "orange",
+      "icon": "General/group",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689194250,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689193957,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true
+  },
+  {
+    "type": "group-with-exclusion",
+    "variant": 0,
+    "command": "show-group-with-exclusion",
+    "payload": {
+      "name": "QA_GROUP-WITH-EXCLUSION_0_519",
+      "details-level": "full"
+    },
+    "response": {
+      "uid": "684319f8-5b69-485b-a060-39a4f47d4657",
+      "name": "QA_GROUP-WITH-EXCLUSION_0_519",
+      "type": "group-with-exclusion",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "include": {
+        "uid": "8084acc8-a47b-4c84-a976-db9e636c8cfe",
+        "name": "QA_HELPER_INCLUDE_6038",
+        "type": "group",
+        "domain": {
+          "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+          "name": "SMC User",
+          "domain-type": "domain"
+        },
+        "members": [],
+        "groups": [],
+        "comments": "",
+        "color": "black",
+        "icon": "General/group",
+        "tags": [],
+        "meta-info": {
+          "lock": "locked by current session",
+          "validation-state": "ok",
+          "last-modify-time": {
+            "posix": 1770689193668,
+            "iso-8601": "2026-02-09T21:06-0500"
+          },
+          "last-modifier": "admin",
+          "creation-time": {
+            "posix": 1770689193668,
+            "iso-8601": "2026-02-09T21:06-0500"
+          },
+          "creator": "admin"
+        },
+        "read-only": false,
+        "available-actions": {
+          "edit": "true",
+          "delete": "true",
+          "clone": "true"
+        }
+      },
+      "except": {
+        "uid": "cd6a9fef-3e6a-4a87-bc2d-db15c41c3f0e",
+        "name": "QA_HELPER_EXCEPT_2980",
+        "type": "group",
+        "domain": {
+          "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+          "name": "SMC User",
+          "domain-type": "domain"
+        },
+        "members": [],
+        "groups": [],
+        "comments": "",
+        "color": "black",
+        "icon": "General/group",
+        "tags": [],
+        "meta-info": {
+          "lock": "locked by current session",
+          "validation-state": "ok",
+          "last-modify-time": {
+            "posix": 1770689193758,
+            "iso-8601": "2026-02-09T21:06-0500"
+          },
+          "last-modifier": "admin",
+          "creation-time": {
+            "posix": 1770689193758,
+            "iso-8601": "2026-02-09T21:06-0500"
+          },
+          "creator": "admin"
+        },
+        "read-only": false,
+        "available-actions": {
+          "edit": "true",
+          "delete": "true",
+          "clone": "true"
+        }
+      },
+      "groups": [],
+      "comments": "QA updated exhaustive variant 0",
+      "color": "orange",
+      "icon": "General/group",
+      "tags": [],
+      "meta-info": {
+        "lock": "locked by current session",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689194250,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689193957,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": false,
+      "available-actions": {
+        "edit": "true",
+        "delete": "true",
+        "clone": "true"
+      }
+    },
+    "success": true
+  },
+  {
+    "type": "group-with-exclusion",
+    "variant": 0,
+    "command": "delete-group-with-exclusion",
+    "payload": {
+      "name": "QA_GROUP-WITH-EXCLUSION_0_519"
+    },
+    "response": {
+      "message": "OK"
+    },
+    "success": true
+  },
+  {
+    "type": "dns-domain",
+    "variant": 0,
+    "command": "add-dns-domain",
+    "payload": {
+      "name": ".qa-domain-0-502.example.com",
+      "is-sub-domain": false,
+      "color": "light green",
+      "comments": "QA Automated Test Object",
+      "details-level": "full",
+      "tags": [],
+      "ignore-warnings": true,
+      "ignore-errors": true
+    },
+    "response": {
+      "uid": "a0e38137-e9e7-428d-a94b-201497c57d0c",
+      "name": ".qa-domain-0-502.example.com",
+      "type": "dns-domain",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "is-sub-domain": false,
+      "comments": "QA Automated Test Object",
+      "color": "light green",
+      "icon": "Objects/domain",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689194848,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689194848,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true,
+    "attempts": 1
+  },
+  {
+    "type": "dns-domain",
+    "variant": 0,
+    "command": "set-dns-domain",
+    "payload": {
+      "name": ".qa-domain-0-502.example.com",
+      "comments": "QA updated exhaustive variant 0",
+      "color": "orange"
+    },
+    "response": {
+      "uid": "a0e38137-e9e7-428d-a94b-201497c57d0c",
+      "name": ".qa-domain-0-502.example.com",
+      "type": "dns-domain",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "is-sub-domain": false,
+      "comments": "QA updated exhaustive variant 0",
+      "color": "orange",
+      "icon": "Objects/domain",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689194935,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689194848,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true
+  },
+  {
+    "type": "dns-domain",
+    "variant": 0,
+    "command": "show-dns-domain",
+    "payload": {
+      "name": ".qa-domain-0-502.example.com",
+      "details-level": "full"
+    },
+    "response": {
+      "uid": "a0e38137-e9e7-428d-a94b-201497c57d0c",
+      "name": ".qa-domain-0-502.example.com",
+      "type": "dns-domain",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "is-sub-domain": false,
+      "comments": "QA updated exhaustive variant 0",
+      "color": "orange",
+      "icon": "Objects/domain",
+      "tags": [],
+      "meta-info": {
+        "lock": "locked by current session",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689194935,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689194848,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": false,
+      "available-actions": {
+        "edit": "true",
+        "delete": "true",
+        "clone": "true"
+      }
+    },
+    "success": true
+  },
+  {
+    "type": "dns-domain",
+    "variant": 0,
+    "command": "delete-dns-domain",
+    "payload": {
+      "name": ".qa-domain-0-502.example.com"
+    },
+    "response": {
+      "message": "OK"
+    },
+    "success": true
+  },
+  {
+    "type": "wildcard",
+    "variant": 0,
+    "command": "add-wildcard",
+    "payload": {
+      "ipv4-address": "10.100.1.35",
+      "ipv4-mask-wildcard": "10.100.1.61",
+      "ipv6-address": "2001:db8:85a3::3df7",
+      "ipv6-mask-wildcard": "2001:db8:85a3::389c",
+      "name": "QA_WILDCARD_0_338",
+      "color": "cyan",
+      "comments": "QA Automated Test Object",
+      "details-level": "uid",
+      "groups": [],
+      "tags": [],
+      "ignore-warnings": true,
+      "ignore-errors": true
+    },
+    "response": {
+      "uid": "41b64793-2d1d-457f-ac70-356ec1da4c14",
+      "name": "QA_WILDCARD_0_338",
+      "type": "wildcard",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address": "10.100.1.35",
+      "ipv6-address": "2001:db8:85a3::3df7",
+      "ipv4-mask-wildcard": "10.100.1.61",
+      "ipv6-mask-wildcard": "2001:db8:85a3::389c",
+      "groups": [],
+      "comments": "QA Automated Test Object",
+      "color": "cyan",
+      "icon": "NetworkObjects/WildcardObject",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689195220,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689195220,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true,
+    "attempts": 1
+  },
+  {
+    "type": "wildcard",
+    "variant": 0,
+    "command": "set-wildcard",
+    "payload": {
+      "name": "QA_WILDCARD_0_338",
+      "comments": "QA updated exhaustive variant 0",
+      "color": "orange"
+    },
+    "response": {
+      "uid": "41b64793-2d1d-457f-ac70-356ec1da4c14",
+      "name": "QA_WILDCARD_0_338",
+      "type": "wildcard",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address": "10.100.1.35",
+      "ipv6-address": "2001:db8:85a3::3df7",
+      "ipv4-mask-wildcard": "10.100.1.61",
+      "ipv6-mask-wildcard": "2001:db8:85a3::389c",
+      "groups": [],
+      "comments": "QA updated exhaustive variant 0",
+      "color": "orange",
+      "icon": "NetworkObjects/WildcardObject",
+      "tags": [],
+      "meta-info": {
+        "lock": "unlocked",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689195336,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689195220,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": true,
+      "available-actions": {}
+    },
+    "success": true
+  },
+  {
+    "type": "wildcard",
+    "variant": 0,
+    "command": "show-wildcard",
+    "payload": {
+      "name": "QA_WILDCARD_0_338",
+      "details-level": "full"
+    },
+    "response": {
+      "uid": "41b64793-2d1d-457f-ac70-356ec1da4c14",
+      "name": "QA_WILDCARD_0_338",
+      "type": "wildcard",
+      "domain": {
+        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+        "name": "SMC User",
+        "domain-type": "domain"
+      },
+      "ipv4-address": "10.100.1.35",
+      "ipv6-address": "2001:db8:85a3::3df7",
+      "ipv4-mask-wildcard": "10.100.1.61",
+      "ipv6-mask-wildcard": "2001:db8:85a3::389c",
+      "groups": [],
+      "comments": "QA updated exhaustive variant 0",
+      "color": "orange",
+      "icon": "NetworkObjects/WildcardObject",
+      "tags": [],
+      "meta-info": {
+        "lock": "locked by current session",
+        "validation-state": "ok",
+        "last-modify-time": {
+          "posix": 1770689195336,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "last-modifier": "admin",
+        "creation-time": {
+          "posix": 1770689195220,
+          "iso-8601": "2026-02-09T21:06-0500"
+        },
+        "creator": "admin"
+      },
+      "read-only": false,
+      "available-actions": {
+        "edit": "true",
+        "delete": "true",
+        "clone": "true"
+      }
+    },
+    "success": true
+  },
+  {
+    "type": "wildcard",
+    "variant": 0,
+    "command": "delete-wildcard",
+    "payload": {
+      "name": "QA_WILDCARD_0_338"
+    },
+    "response": {
+      "message": "OK"
+    },
+    "success": true
+  }
+]
