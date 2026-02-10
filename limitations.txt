@@ -1,25 +1,23 @@
-## Unsupported fields in TCP Services
-    - delayed_sync_value, 
-    - enable_tcp_resource, 
-    - use_delayed_sync
+# Check Point API Exporter - Current Limitations
 
-## Unsupported fields in cp_mgmt_application_site
-    - primary_category_id
-    
-## The objects ['access-role', 'simple-gateway', 'simple-cluster', 'vpn-community-meshed', 'vpn-community-star'] are exported with limited fields.
+This list reflects the current state of the exporter. Many previous limitations (like Cleanup rule export and TCP service fields) have been addressed in recent cycles.
 
-## The API show remote-access-client and ansible expects remote-access-clients plural
+## 🚀 Recently Resolved (Cycle 1-5 Improvements)
+- **Cleanup Rule Export**: Now fully supported. The exporter intelligently uses `set` if the layer already has a default rule enabled, and `add` otherwise. It also enforces `track Log` by default.
+- **TCP Service Fields**: Fields like `delayed-sync-value`, `enable-tcp-resource`, and `use-delayed-sync` are now fully supported via dynamic API spec discovery.
+- **VPN Parameters**: `shared-secret` nesting is now correctly handled for CLI imports.
+- **Topology Filtering**: Refined to target auto-generated `Net_X.X.X.X` objects while preserving user-created ones.
 
-## Access rules:
-    - VPN and content settings are not exported
-    - Existing clean up rules are not exported. Default rule is created with layer creation.
-        - The commands to show the policy layers do not include the option add_default_rule which is needed since we are getting those rules from the source machine
-        - if the policy layer, the ansible code will try to use the set-access-layer command instead of add. This dies not support "add_default_rule".
-        - When trying to update the cleanup rule, equals crashes
-    - having a rule with the name "Management" will break the ansible code execusion.    
-    - If the rules contain updatable objects, make sure your smartconsole on the target management has internet connection and that you opened the updatable objects view which will update the database to make sure the object used in the rule exists on the management. 
+## ⚠️ Current Object Constraints
+- **Application Control**: `application-site` may miss the `primary-category` field depending on the source API version's spec visibility.
+- **Whitelisted Fields**: Certain complex objects (`access-role`, `simple-gateway`, `vpn-community-*`) are exported with a curated list of fields to ensure import stability on diverse target environments.
+- **Ansible Mappings**: The API uses `remote-access-client` (singular), but Ansible expects `remote-access-clients` (plural).
 
-        `*` fatal: [203.0.113.100]: FAILED! => {"changed": false, "msg": "Checkpoint device returned error 404 with message {'code': 'generic_err_object_not_found', 'message': 'Requested object [Office365 Services] not found'} Unpublished changes were discarded"}
+## 🔒 Access Rule Limitations
+- **Advanced Parameters**: `vpn` and `content` (Content Awareness) settings are currently not exported.
+- **Rule Names**: Having a rule named "Management" can still cause issues with the `cp_mgmt_access_rule` Ansible module.
+- **Updatable Objects**: Rules using objects like "Office365 Services" require the target Management server to have internet access and an updated Updatable Objects database for the import to succeed.
 
-
- ### if you need to import the tasks in ansible in order, use loop to import the taks and don't import them individually.       
+## 💡 Best Practices
+- **Parallel Import**: If importing via Ansible, use a loop to import tasks in sequence for better dependency management.
+- **CLI Import**: For largest policies, the generated `import_mgmt_cli.txt` is the most robust method as it bypasses Ansible-specific module overhead.
