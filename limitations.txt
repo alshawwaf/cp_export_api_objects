@@ -1,23 +1,28 @@
-# Check Point API Exporter - Current Limitations
+# Check Point API Exporter - Bridged API Gaps
 
-This list reflects the current state of the exporter. Many previous limitations (like Cleanup rule export and TCP service fields) have been addressed in recent cycles for R80.40, R81.x, and R82 servers.
+This document lists features that were previously unsupported by the standard API show commands or Ansible modules, but have been added to this exporter.
 
-## Recently Resolved (Cycle 1-5 Improvements)
-- **Cleanup Rule Export**: Now fully supported across all versions. The exporter intelligently uses `set` if the layer already has a default rule enabled, and `add` otherwise. It also enforces `track Log` by default.
-- **TCP Service Fields**: Fields like `delayed-sync-value`, `enable-tcp-resource`, and `use-delayed-sync` (API 1.x and 2.x) are now fully supported via dynamic API spec discovery.
-- **VPN Parameters**: `shared-secret` nesting is now correctly handled for CLI imports, consistent with management API v1.6 and above.
-- **Topology Filtering**: Refined to target auto-generated `Net_X.X.X.X` objects while preserving user-created ones.
+## Access Layer Default Rule Property
+- **Feature**: add-default-rule
+- **Version Added**: API 1.1 (R80.10)
+- **Description**: Standard show-access-layers commands often omit this property. The exporter now explicitly whitelists and parses this field to determine if a layer has an auto-generated cleanup rule.
 
-## Current Object Constraints
-- **Application Control**: `application-site` may miss the `primary-category` field depending on the source API version's spec visibility (notably in R80.x/API 1.6).
-- **Whitelisted Fields**: Certain complex objects (`access-role`, `simple-gateway`, `vpn-community-*`) are exported with a curated list of fields to ensure import stability across different API versions (R80.x to R82).
-- **Ansible Mappings**: The API uses `remote-access-client` (singular), but Ansible modules for R81.x still expect `remote-access-clients` (plural).
+## Default Cleanup Rule Management
+- **Feature**: Automatic set vs add logic for Cleanup rules
+- **Version Added**: Script Logic for R80.40 and above
+- **Description**: Resolved the conflict where auto-generated cleanup rules caused import failures. The exporter now detects existing default rules and uses the set command to enforce track Log, while using add for custom cleanup rules.
 
-## Access Rule Limitations
-- **Advanced Parameters**: `vpn` and `content` (Content Awareness) settings are currently not exported.
-- **Rule Names**: Having a rule named "Management" can still cause issues with the `cp_mgmt_access_rule` Ansible module.
-- **Updatable Objects**: Rules using objects like "Office365 Services" require the target Management server (R80.40+) to have internet access and an updated Updatable Objects database for the import to succeed.
+## TCP Service Sync Parameters
+- **Feature**: delayed-sync-value, enable-tcp-resource, use-delayed-sync
+- **Version Added**: API 1.0 (R80)
+- **Description**: These advanced synchronization fields were previously missing from static export lists. They are now dynamically discovered and supported for R80.10 and later management servers.
 
-## Best Practices
-- **Parallel Import**: If importing via Ansible, use a loop to import tasks in sequence for better dependency management.
-- **CLI Import**: For largest policies (especially on R82/API 2.x), the generated `import_mgmt_cli.txt` is the most robust method as it bypasses Ansible-specific module overhead.
+## VPN Shared Secret Nesting
+- **Feature**: Nested shared-secrets structure
+- **Version Added**: API 1.6 (R80.40)
+- **Description**: Standard API responses often provide shared secrets in a format incompatible with direct CLI adds. The exporter correctly nests these within the shared-secrets list for each gateway to ensure successful CLI import.
+
+## Network Topology Filter
+- **Feature**: Case-sensitive auto-gen pattern matching
+- **Version Added**: Script Logic for R81 and above
+- **Description**: Implemented precise filtering to distinguish between system-managed Net_X.X.X.X objects and user-created net_... objects, preventing accidental exclusion of critical network definitions.
